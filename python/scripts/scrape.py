@@ -7,6 +7,7 @@ def scrape():
     """
     scraper = Scraper()
     scraper.launch()
+    urls = scraper.get_all_dataset_urls()
 
 
 if __name__ == "__main__":
