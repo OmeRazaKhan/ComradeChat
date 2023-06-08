@@ -1,0 +1,9 @@
+from python.scripts.scrape import scrape
+
+
+def main():
+    scrape()
+
+
+if __name__ == "__main__":
+    main()
