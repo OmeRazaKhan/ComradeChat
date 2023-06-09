@@ -6,28 +6,21 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 
-import python.scrapers.constants as constants
+import python.scrapers.config as config
+from python.scrapers.scraper import Scraper
 
 
-class DatasetUrlScraper:
+class UrlScraper(Scraper):
     """
     Performs all scraping operations on the open source data portal.
     """
 
-    def __init__(self, crawl_delay: float = constants.DEFAULT_CRAWL_DELAY):
+    def __init__(self, crawl_delay: float = config.DEFAULT_CRAWL_DELAY):
         """
         Params:
             crawl_delay (int, default=DEFAULT_CRAWL_DELAY): The delay after loading a new webpage.
         """
-        self._crawl_delay = crawl_delay
-        self._driver = None
-
-    @property
-    def crawl_delay(self) -> float:
-        """
-        The time delay after loading a new webpage.
-        """
-        return self._crawl_delay
+        super().__init__(crawl_delay=crawl_delay)
 
     def _is_dataset_url(self, url: str) -> bool:
         """
@@ -70,7 +63,7 @@ class DatasetUrlScraper:
             Exception: If the button to the last page can not be located.
         """
         self._driver.get(first_page_url)
-        time.sleep(constants.DEFAULT_CRAWL_DELAY)
+        time.sleep(self.crawl_delay)
         try:
             last_page_button = WebDriverWait(self._driver, 10).until(
                 EC.presence_of_element_located(
@@ -112,7 +105,7 @@ class DatasetUrlScraper:
             (list): The list of all URLs leading to a dataset on the Open Portal.
         """
         self._driver = webdriver.Firefox(
-            executable_path=constants.SELENIUM_DRIVER_PATH)
+            executable_path=config.SELENIUM_DRIVER_PATH)
 
         # Obtain the URLs to all main pages in the search portal.
         total_pages = self._get_num_search_pages(first_page_url)
@@ -125,7 +118,7 @@ class DatasetUrlScraper:
         for search_portal_url in search_portal_urls:
 
             self._driver.get(search_portal_url)
-            time.sleep(constants.DEFAULT_CRAWL_DELAY)
+            time.sleep(self.crawl_delay)
             try:
                 root_div = WebDriverWait(self._driver, 10).until(
                     EC.presence_of_element_located(
