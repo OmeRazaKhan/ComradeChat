@@ -1,3 +1,12 @@
+"""
+#TODO
+Implement:
+        subjects = self._scrape_subjects() #TODO
+        audience = self._scrape_audience() #TODO
+        date_published = self._scrape_date_published() #TODO
+        dataset_description = self._scrape_dataset_description() #TODO
+        datasets = self._scrape_datasets() #TODO
+"""
 
 import time
 import re
@@ -45,13 +54,16 @@ class DataScraper(Scraper):
         html_regex = "<[^>]+>"
         return re.sub(html_regex, "", text)
 
-    def _get_keywords(self) -> list:
+    def _scrape_keywords(self) -> list:
         """
-        Returns a list of all keywords about the dataset on a webpage.
+        Scrapes a list of all keywords about the dataset on a webpage.
 
         Raises:
             Warning: If the section could not be identified to have keywords.
             Exception: If an element could not be located.
+            
+        Returns:
+            (list): All keywords found on the dataset's webpage.
         """
         try:
             keywords_div = WebDriverWait(self._driver, 10).until(
@@ -74,12 +86,66 @@ class DataScraper(Scraper):
             return keywords
         except Exception as e:
             raise e
+        
+    def _scrape_subjects(self) -> list:
+        """
+        Scrapes all relevant subjects listed on the dataset's webpage.
+
+        Raises:
+            Warning: If the section could not be identified to have subjects.
+            Exception: If an element could not be located.
+        
+        Returns:
+            (list): A list of all relevant subjects to the dataset.
+        """
+        
+    def _scrape_audience(self) -> list:
+        """
+        Scrapes all potential audiences listed on the dataset's webpage.
+
+        Raises:
+            Warning: If the section could not be identified to have an audience.
+            Exception: If an element could not be located.
+        
+        Returns:
+            (list): A list of all potential audiences for the dataset.
+        """
+        
+    def _scrape_date_published(self) -> str:
+        """
+        Scrapes the date that the dataset was published.
+
+        Raises:
+            Warning: If the section could not be identified to have an audience.
+            Exception: If an element could not be located.
+        
+        Returns:
+            (str): The dataset's publication date in the format yyyy-mm-dd.
+        """
+        
+    def _scrape_dataset_description(self) -> str:
+        """
+        Scrapes the description given for the dataset.
+
+        Raises:
+            Warning: If the section could not be identified to have an audience.
+            Exception: If an element could not be located.
+        
+        Returns:
+            (str): The description given for the dataset.
+        """
 
     def _get_all_data(self):
         """
         Returns all necessary information from the dataset.
         """
-        keywords = self._get_keywords()
+        keywords = self._scrape_keywords() #Complete
+        subjects = self._scrape_subjects() #TODO
+        audience = self._scrape_audience() #TODO
+        date_published = self._scrape_date_published() #TODO
+        dataset_description = self._scrape_dataset_description() #In progress
+        #datasets = self._scrape_datasets() #In progress
+        
         print(keywords)
 
     def scrape(self) -> list:
