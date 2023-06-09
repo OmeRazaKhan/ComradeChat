@@ -1,11 +1,5 @@
 """
-#TODO
-Implement:
-        subjects = self._scrape_subjects() #TODO
-        audience = self._scrape_audience() #TODO
-        date_published = self._scrape_date_published() #TODO
-        dataset_description = self._scrape_dataset_description() #TODO
-        datasets = self._scrape_datasets() #TODO
+#TODO Implement _scrape_datasets() and create Dataset class.
 """
 
 import time
@@ -154,17 +148,33 @@ class DataScraper(Scraper):
         except Exception as e:
             raise e
 
-    def _scrape_date_published(self) -> str:
+    def _scrape_temporal_coverage(self) -> str:
         """
-        Scrapes the date that the dataset was published.
+        Scrapes the date of coverage for the news article.
 
         Raises:
-            Warning: If the section could not be identified to have an audience.
+            Warning: If the section could not be identified to have a temporal coverage section.
             Exception: If an element could not be located.
 
         Returns:
-            (str): The dataset's publication date in the format yyyy-mm-dd.
+            (str): The temporal period covered by the dataset in the format "yyyy-mm-dd to yyyy-mm-dd".
         """
+        try:
+            temporal_coverage_div = WebDriverWait(self._driver, 10).until(
+                EC.presence_of_element_located(
+                    (By.XPATH, "/html/body/div/div/main/div[2]/aside/div[2]/ul/li[11]"))
+            )
+            temporal_coverage_title_path = temporal_coverage_div.find_element(
+                by=By.XPATH, value="./b")
+            if not "Temporal Coverage" in temporal_coverage_title_path.text:
+                raise Warning("Did not find temporal coverage section")
+            temporal_coverage_field = temporal_coverage_div.find_element(
+                by=By.XPATH, value="./small")
+            temporal_coverage_text = temporal_coverage_field.text
+            temporal_coverage = self._strip_html_tags(temporal_coverage_text)
+            return temporal_coverage
+        except Exception as e:
+            raise e
 
     def _scrape_dataset_description_texts(self) -> list:
         """
@@ -195,6 +205,18 @@ class DataScraper(Scraper):
         except Exception as e:
             raise e
 
+    def _scrape_datasets(self) -> list:
+        """
+        Scrapes the datasets from the webpage.
+
+        Raises:
+            Warning: If the section could not be identified to have an audience.
+            Exception: If an element could not be located.
+
+        Returns:
+            (list): A list of all datasets on the webpage.
+        """
+
     def _get_all_data(self):
         """
         Returns all necessary information from the dataset.
@@ -202,11 +224,11 @@ class DataScraper(Scraper):
         keywords = self._scrape_keywords()  # Complete
         subjects = self._scrape_subjects()  # Complete
         audience = self._scrape_audience()  # Complete
-        date_published = self._scrape_date_published()  # TODO
+        temporal_coverage = self._scrape_temporal_coverage()  # Complete
         dataset_description_texts = self._scrape_dataset_description_texts()  # Complete
-        # datasets = self._scrape_datasets() #In progress
+        datasets = self._scrape_datasets()  # In progress
 
-        print(dataset_description_texts)
+        print(temporal_coverage)
 
     def scrape(self) -> list:
         """
