@@ -11,6 +11,7 @@ from selenium.webdriver.common.by import By
 
 import python.scrapers.config as config
 from python.scrapers.scraper import Scraper
+from python.scrapers.dataset_extensions import DatasetExtensions
 
 
 class DataScraper(Scraper):
@@ -205,30 +206,97 @@ class DataScraper(Scraper):
         except Exception as e:
             raise e
 
+    def _parse_information_panel(self, title_panel) -> dict:
+        """
+        Extracts all relevant information from the title panel in a resource item.
+        """
+        title_element, information_tag_div = title_panel.find_elements(
+            by=By.XPATH, value="./*")
+        title = self._strip_html_tags(title_element.text)
+        languages = []
+        miscellaneous_info = []
+        recognized_dataset_extensions = [
+            extension.value for extension in DatasetExtensions]
+        file_type = None
+        for child in information_tag_div.find_elements(by=By.XPATH, value="./*"):
+            classes = child.get_attribute("class")
+            text = self._strip_html_tags(child.text)
+            if "res-tag-lang" in classes:  # See if the tag is a language.
+                languages.append(text)
+            elif text.lower() in recognized_dataset_extensions:
+                if not file_type is None:
+                    print("Warning: Multiple file types detected: {} and {}".format(
+                        file_type, text.lower()))
+                file_type = text
+            else:
+                miscellaneous_info.append(text)
+
+        information_tags = {}
+        information_tags["title"] = title
+        information_tags["languages"] = languages
+        information_tags["file_type"] = file_type
+        information_tags["miscellaneous"] = miscellaneous_info
+        return information_tags
+
+    def _parse_dataset_url(self, download_panel) -> str:
+        """
+        Returns the URL to download the dataset.
+        """
+        # print(download_panel.text)
+        anchor_tags = download_panel.find_elements(
+            by=By.XPATH, value=".//*//a")
+        for anchor_tag in anchor_tags:
+            text = self._strip_html_tags(anchor_tag.text)
+            if text == "Download":
+                return anchor_tag.get_attribute("href")
+
     def _scrape_datasets(self) -> list:
         """
         Scrapes the datasets from the webpage.
 
         Raises:
-            Warning: If the section could not be identified to have an audience.
+            Warning.
             Exception: If an element could not be located.
 
         Returns:
             (list): A list of all datasets on the webpage.
         """
+        try:
+            dataset_div = WebDriverWait(self._driver, 10).until(
+                EC.presence_of_element_located(
+                    (By.ID, "dataset-resources"))
+            )
+            dataset_ul = dataset_div.find_element(by=By.XPATH, value=".//ul")
+            datasets = []
+            WebDriverWait(dataset_div, 10).until(
+                EC.presence_of_element_located((By.XPATH, './*')))
+            resource_items = dataset_ul.find_elements(
+                by=By.XPATH, value="./*")
+            for resource_item in resource_items:
+                information_dict = dict()
+                title_panel, download_panel = resource_item.find_elements(
+                    by=By.XPATH, value="./*")
+                information_dict = self._parse_information_panel(title_panel)
+                dataset_url = self._parse_dataset_url(download_panel)
+                information_dict["dataset_url"] = dataset_url
+                datasets.append(information_dict)
+            return datasets
 
-    def _get_all_data(self):
+        except Exception as e:
+            raise e
+
+    def _get_all_data(self) -> dict:
         """
         Returns all necessary information from the dataset.
         """
-        keywords = self._scrape_keywords()  # Complete
-        subjects = self._scrape_subjects()  # Complete
-        audience = self._scrape_audience()  # Complete
-        temporal_coverage = self._scrape_temporal_coverage()  # Complete
-        dataset_description_texts = self._scrape_dataset_description_texts()  # Complete
-        datasets = self._scrape_datasets()  # In progress
-
-        print(temporal_coverage)
+        dataset = {}
+        dataset["keywords"] = self._scrape_keywords()
+        dataset["subjects"] = self._scrape_subjects()
+        dataset["audience"] = self._scrape_audience()
+        dataset["temporal_coverage"] = self._scrape_temporal_coverage()
+        dataset["description"] = self._scrape_dataset_description_texts()
+        dataset["data"] = self._scrape_datasets()
+        return dataset
 
     def scrape(self) -> list:
         """
