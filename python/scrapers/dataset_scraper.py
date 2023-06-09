@@ -131,6 +131,28 @@ class DataScraper(Scraper):
         Returns:
             (list): A list of all potential audiences for the dataset.
         """
+        try:
+            audiences_div = WebDriverWait(self._driver, 10).until(
+                EC.presence_of_element_located(
+                    (By.XPATH, "/html/body/div/div/main/div[2]/aside/div[2]/ul/li[4]"))
+            )
+            audiences_title_path = audiences_div.find_element(
+                by=By.XPATH, value="./strong")
+            if not "Audience" in audiences_title_path.text:
+                raise Warning("Did not find audience section")
+            audiences = []
+            audiences_ul = audiences_div.find_element(
+                by=By.XPATH, value="./ul")
+            WebDriverWait(audiences_ul, 10).until(
+                EC.presence_of_element_located((By.XPATH, './*')))
+            audiences_li = audiences_ul.find_elements(by=By.XPATH, value="./*")
+            for audience_li in audiences_li:
+                audience_text = audience_li.text
+                audience = self._strip_html_tags(audience_text)
+                audiences.append(audience)
+            return audiences
+        except Exception as e:
+            raise e
 
     def _scrape_date_published(self) -> str:
         """
@@ -167,7 +189,7 @@ class DataScraper(Scraper):
         dataset_description = self._scrape_dataset_description()  # In progress
         # datasets = self._scrape_datasets() #In progress
 
-        print(subjects)
+        print(audience)
 
     def scrape(self) -> list:
         """
