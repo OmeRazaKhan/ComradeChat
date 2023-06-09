@@ -166,7 +166,7 @@ class DataScraper(Scraper):
             (str): The dataset's publication date in the format yyyy-mm-dd.
         """
 
-    def _scrape_dataset_description(self) -> str:
+    def _scrape_dataset_description_texts(self) -> list:
         """
         Scrapes the description given for the dataset.
 
@@ -175,8 +175,25 @@ class DataScraper(Scraper):
             Exception: If an element could not be located.
 
         Returns:
-            (str): The description given for the dataset.
+            (list): List of all text sections in the dataset description.
         """
+        try:
+            description_div = WebDriverWait(self._driver, 10).until(
+                EC.presence_of_element_located(
+                    (By.ID, "resource-desc"))
+            )
+            description_paragraphs = []
+            WebDriverWait(description_div, 10).until(
+                EC.presence_of_element_located((By.XPATH, './*')))
+            description_children = description_div.find_elements(
+                by=By.XPATH, value="./*")
+            for child in description_children:
+                child_text = child.text
+                child = self._strip_html_tags(child_text)
+                description_paragraphs.append(child)
+            return description_paragraphs
+        except Exception as e:
+            raise e
 
     def _get_all_data(self):
         """
@@ -184,12 +201,12 @@ class DataScraper(Scraper):
         """
         keywords = self._scrape_keywords()  # Complete
         subjects = self._scrape_subjects()  # Complete
-        audience = self._scrape_audience()  # TODO
+        audience = self._scrape_audience()  # Complete
         date_published = self._scrape_date_published()  # TODO
-        dataset_description = self._scrape_dataset_description()  # In progress
+        dataset_description_texts = self._scrape_dataset_description_texts()  # Complete
         # datasets = self._scrape_datasets() #In progress
 
-        print(audience)
+        print(dataset_description_texts)
 
     def scrape(self) -> list:
         """
