@@ -61,7 +61,7 @@ class DataScraper(Scraper):
         Raises:
             Warning: If the section could not be identified to have keywords.
             Exception: If an element could not be located.
-            
+
         Returns:
             (list): All keywords found on the dataset's webpage.
         """
@@ -86,7 +86,7 @@ class DataScraper(Scraper):
             return keywords
         except Exception as e:
             raise e
-        
+
     def _scrape_subjects(self) -> list:
         """
         Scrapes all relevant subjects listed on the dataset's webpage.
@@ -94,11 +94,32 @@ class DataScraper(Scraper):
         Raises:
             Warning: If the section could not be identified to have subjects.
             Exception: If an element could not be located.
-        
+
         Returns:
             (list): A list of all relevant subjects to the dataset.
         """
-        
+        try:
+            subjects_div = WebDriverWait(self._driver, 10).until(
+                EC.presence_of_element_located(
+                    (By.XPATH, "/html/body/div/div/main/div[2]/aside/div[2]/ul/li[3]"))
+            )
+            subject_title_path = subjects_div.find_element(
+                by=By.XPATH, value="./strong")
+            if not "Subject" in subject_title_path.text:
+                raise Warning("Did not find subject section")
+            subjects = []
+            subjects_ul = subjects_div.find_element(by=By.XPATH, value="./ul")
+            WebDriverWait(subjects_ul, 10).until(
+                EC.presence_of_element_located((By.XPATH, './*')))
+            subjects_li = subjects_ul.find_elements(by=By.XPATH, value="./*")
+            for subject_li in subjects_li:
+                subject_text = subject_li.text
+                subject = self._strip_html_tags(subject_text)
+                subjects.append(subject)
+            return subjects
+        except Exception as e:
+            raise e
+
     def _scrape_audience(self) -> list:
         """
         Scrapes all potential audiences listed on the dataset's webpage.
@@ -106,11 +127,11 @@ class DataScraper(Scraper):
         Raises:
             Warning: If the section could not be identified to have an audience.
             Exception: If an element could not be located.
-        
+
         Returns:
             (list): A list of all potential audiences for the dataset.
         """
-        
+
     def _scrape_date_published(self) -> str:
         """
         Scrapes the date that the dataset was published.
@@ -118,11 +139,11 @@ class DataScraper(Scraper):
         Raises:
             Warning: If the section could not be identified to have an audience.
             Exception: If an element could not be located.
-        
+
         Returns:
             (str): The dataset's publication date in the format yyyy-mm-dd.
         """
-        
+
     def _scrape_dataset_description(self) -> str:
         """
         Scrapes the description given for the dataset.
@@ -130,7 +151,7 @@ class DataScraper(Scraper):
         Raises:
             Warning: If the section could not be identified to have an audience.
             Exception: If an element could not be located.
-        
+
         Returns:
             (str): The description given for the dataset.
         """
@@ -139,14 +160,14 @@ class DataScraper(Scraper):
         """
         Returns all necessary information from the dataset.
         """
-        keywords = self._scrape_keywords() #Complete
-        subjects = self._scrape_subjects() #TODO
-        audience = self._scrape_audience() #TODO
-        date_published = self._scrape_date_published() #TODO
-        dataset_description = self._scrape_dataset_description() #In progress
-        #datasets = self._scrape_datasets() #In progress
-        
-        print(keywords)
+        keywords = self._scrape_keywords()  # Complete
+        subjects = self._scrape_subjects()  # Complete
+        audience = self._scrape_audience()  # TODO
+        date_published = self._scrape_date_published()  # TODO
+        dataset_description = self._scrape_dataset_description()  # In progress
+        # datasets = self._scrape_datasets() #In progress
+
+        print(subjects)
 
     def scrape(self) -> list:
         """
