@@ -2,6 +2,7 @@
 Contains all necessary information for each dataset scraped.
 """
 from python.database.supported_file_type import SupportedFileType
+from datetime import datetime
 
 
 class Dataset:
@@ -55,20 +56,26 @@ class Dataset:
         return self._miscellaneous
 
 
-class Data:
+class MetaData:
+    """
+    Contains all metadata for each website scraped.
+    """
 
-    def __init__(self, keywords: list, subjects: list, audience: list, start_date: str, end_date: str,
+    def __init__(self, id: int, keywords: list, subjects: list, audience: list, start_date: str, end_date: str,
                  description: str, datasets: list):
         """
         Params:
+            id (int): A unique identifier used to reference the MetaData.
             keywords (list): All keywords relating to the data.
             subjects (list): All potentially relevant subjects to the data.
             audience (list): The target demographic of the data.
-            start_date (str): The beginning of the dataset's temporal coverage.
-            end_date (str): The end of the dataset's temporal coverage.
+            start_date (datetime): The beginning of the dataset's temporal coverage.
+            end_date (datetime): The end of the dataset's temporal coverage.
             description (str): A string description of the dataset's contents.
             datasets (list(Database)): All datasets corresponding to the data.
         """
+
+        self._id = id
         self._keywords = keywords
         self._subjects = subjects
         self._audience = audience
@@ -76,6 +83,13 @@ class Data:
         self._end_date = end_date
         self._description = description
         self._datasets = datasets
+
+    @property
+    def id(self) -> int:
+        """
+        Unique identifier used to reference the metadata.
+        """
+        return self._id
 
     @property
     def keywords(self) -> list:
@@ -99,14 +113,14 @@ class Data:
         return self._audience
 
     @property
-    def start_date(self) -> str:
+    def start_date(self) -> datetime:
         """
         The beginning of the dataset's temporal coverage.
         """
         return self._start_date
 
     @property
-    def end_date(self) -> str:
+    def end_date(self) -> datetime:
         """
         The end of the dataset's temporal coverage.
         """

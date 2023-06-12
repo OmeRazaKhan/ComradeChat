@@ -25,10 +25,11 @@ def scrape_data(urls: list, output_file_path: str):
     """
     Scrapes all datasets from the given urls and stores it in a JSON file.
     """
-    all_data = []
-    for url in urls:
+    all_data = {}
+    for i in range(len(urls)):
+        url = urls[i]
         scraper = DataScraper(url)
         data = scraper.scrape()
-        all_data.append(data)
+        all_data[i + 1] = data
     with open(output_file_path, "w", encoding="utf-8") as f:
         json.dump(all_data, f, indent=4)
