@@ -87,5 +87,4 @@ class API:
 
         with open("resources/sample_response.json", "r", encoding="utf-8") as f:
             sample_response = json.load(f)
-        sample_response = json.dumps(obj=sample_response)
         return sample_response
