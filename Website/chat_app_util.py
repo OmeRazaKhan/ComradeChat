@@ -6,6 +6,7 @@ from dash import html
 CONST_LENGTH = 40
 
 
+
 # split a long string into smaller chunks
 def split_text(text):
     chunked = [""]
