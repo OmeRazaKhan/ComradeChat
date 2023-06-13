@@ -3,6 +3,7 @@ Contains all necessary information for each dataset scraped.
 """
 from python.database.supported_file_type import SupportedFileType
 from datetime import datetime
+from typing import Any
 
 
 class Dataset:
@@ -10,7 +11,7 @@ class Dataset:
     Contains all relevant information for each dataset.
     """
 
-    def __init__(self, title: str, languages: str | list, file_type: SupportedFileType, url: str, miscellaneous: list):
+    def __init__(self, title: str, languages: Any, file_type: SupportedFileType, url: str, miscellaneous: list):
         """
         Params:
             title (str): The title of the dataset.
