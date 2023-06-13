@@ -41,5 +41,3 @@ def search(query):
         for hit in hits:
             print( hit.entity.get('title'), '----', hit.distance)
         print()
-
-search("Give me all the datasets that correpond to mental health.")
