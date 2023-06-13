@@ -1,9 +1,6 @@
 """
 Module providing a method of interacting with the data scraped from the open search portal.
 """
-from python.database.parser import Parser
-from python.database.metadata import Dataset, MetaData
-
 
 class Database:
 
@@ -16,35 +13,43 @@ class Database:
             (dict(int: string)): The ID of each metadata entry mapped to the description of its dataset.
         """
         ids_to_descriptions = dict()
-        for key in self._ids_to_metadata.keys():
-            metadata = self._ids_to_metadata.get(key)
+        for id in self._ids_to_metadata.keys():
+            metadata = self._ids_to_metadata.get(id)
             description = metadata.description
-            ids_to_descriptions[key] = description
+            ids_to_descriptions[id] = description
         return ids_to_descriptions
 
-    def get_metadata(self, key) -> dict:
-        """
-        Returns all metadata for the specified key.
-        """
-        return self._ids_to_metadata.get(key)
-
-    def get_description(self, key) -> str:
+    def get_metadata(self, id: int) -> dict:
         """
         Returns:
-            (str): The description of the dataset referred to by the given key.
+            (dict): All metadata for the specified id.
         """
-        return self._ids_to_metadata.get(key).description
+        return self._ids_to_metadata.get(id)
 
-    def get_dataset_urls(self, key) -> str:
+    def get_dataset_url(self, id: int) -> str:
         """
         Returns:
-            (str): The URL to the dataset referred to by the given key.
+            (str): The URL for the dataset with the given id value.
         """
-        return self._ids_to_metadata.get(key).dataset.url
+        return self._ids_to_metadata.get(id).dataset_url
 
-    def get_all_keys(self) -> list:
+    def get_description(self, id: int) -> str:
         """
         Returns:
-            (list): All keys in the database.
+            (str): The description of the dataset with the specified id.
+        """
+        return self._ids_to_metadata.get(id).description
+
+    def get_resources(self, id: int) -> list:
+        """
+        Returns:
+            (list): A list of all resources relevant to the dataset.
+        """
+        return self._ids_to_metadata.get(id).resource
+
+    def get_all_keys(self):
+        """
+        Returns:
+            (list): A list of all key values in the database.
         """
         return self._ids_to_metadata.keys()

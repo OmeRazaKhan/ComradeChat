@@ -6,25 +6,25 @@ from datetime import datetime
 from typing import Any
 
 
-class Dataset:
+class Resource:
     """
     Contains all relevant information for each dataset.
     """
 
-    def __init__(self, title: str, languages: Any, file_type: SupportedFileType, url: str, miscellaneous: list):
+    def __init__(self, title: str = None, languages: list = None, file_type: SupportedFileType = None, url: str = None, miscellaneous: list = None):
         """
         Params:
-            title (str): The title of the dataset.
-            languages (str|list): Any languages included in the dataset.
-            file_type (str): The file type of the dataset.
-            url (str): The URL to download the dataset.
-            miscellaneous (list): Any miscellaneous information which may be relevant.
+            title (str, default=None): The title of the dataset.
+            languages (list, default=None): Any languages included in the dataset.
+            file_type (SupportedFileType, default=None): The file type of the dataset.
+            url (str, default=None): The URL to download the dataset.
+            miscellaneous (list, default=None): Any miscellaneous information which may be relevant.
         """
         self._title = title
         if type(languages) is str:
             languages = [languages]
         self._languages = languages
-        self._file_type = file_type
+        self._file_type = file_type.value
         self._url = url
         self._miscellaneous = miscellaneous
 
@@ -62,28 +62,31 @@ class MetaData:
     Contains all metadata for each website scraped.
     """
 
-    def __init__(self, id: int, keywords: list, subjects: list, audience: list, start_date: str, end_date: str,
-                 description: str, datasets: list):
+    def __init__(self, id: int, description: str, dataset_url: str, keywords: list = None, subjects: list = None,
+                 audience: list = None, start_date: datetime = None, end_date: datetime = None, resources: list = None):
         """
         Params:
             id (int): A unique identifier used to reference the MetaData.
-            keywords (list): All keywords relating to the data.
-            subjects (list): All potentially relevant subjects to the data.
-            audience (list): The target demographic of the data.
-            start_date (datetime): The beginning of the dataset's temporal coverage.
-            end_date (datetime): The end of the dataset's temporal coverage.
-            description (str): A string description of the dataset's contents.
-            datasets (list(Database)): All datasets corresponding to the data.
+            description (str): A description of the information presented by the dataset.
+            dataset_url (str): The URL of the dataset.
+            keywords (list, default=None): All keywords relating to the data.
+            subjects (list, default=None): All potentially relevant subjects to the data.
+            audience (list, default=None): The target demographic of the data.
+            start_date (datetime, default=None): The beginning of the dataset's temporal coverage.
+            end_date (datetime, default=None): The end of the dataset's temporal coverage.
+            resources (list(Resource), default=None): All resources listed in the dataset.
         """
 
         self._id = id
+        self._description = description
+        self._dataset_url = dataset_url
+        
         self._keywords = keywords
         self._subjects = subjects
         self._audience = audience
         self._start_date = start_date
         self._end_date = end_date
-        self._description = description
-        self._datasets = datasets
+        self._resources = resources
 
     @property
     def id(self) -> int:
@@ -91,6 +94,20 @@ class MetaData:
         Unique identifier used to reference the metadata.
         """
         return self._id
+
+    @property
+    def description(self) -> str:
+        """
+        Description of the data.
+        """
+        return self._description
+    
+    @property
+    def dataset_url(self) -> str:
+        """
+        The dataset's URL.
+        """
+        return self._dataset_url
 
     @property
     def keywords(self) -> list:
@@ -128,15 +145,8 @@ class MetaData:
         return self._end_date
 
     @property
-    def description(self) -> str:
+    def resources(self) -> list:
         """
-        Description of the data.
+        All resources listed in the dataset.
         """
-        return self._description
-
-    @property
-    def datasets(self) -> list:
-        """
-        All datasets listed on the webpage.
-        """
-        return self._datasets
+        return self._resources
