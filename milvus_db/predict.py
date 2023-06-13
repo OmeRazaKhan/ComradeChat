@@ -1,19 +1,19 @@
 import time
 from sentence_transformers import SentenceTransformer
 from pymilvus import Collection
-import config
 from pymilvus import connections
+import milvus_db.config as config
 
 def embed_search(data, transformer):
     embeds = transformer.encode(data) 
     return [x for x in embeds]
 
-def search(query):
+def search(query) -> list[int]:
     # connect to server
     connections.connect(host=config.MILVUS_HOST, port=config.MILVUS_PORT)
 
     # load in database
-    collection = Collection("movies_db")   
+    collection = Collection(config.COLLECTION_NAME)   
     collection.load()
 
     # load in transformer
@@ -23,21 +23,25 @@ def search(query):
     search_data = embed_search([query], transformer)
 
     # perform search
-    start = time.time()
     res = collection.search(
         data=search_data,  # Embeded search value
         anns_field="embedding",  # Search across embeddings
         param={},
         limit = 3,  # Limit to top_k results per search
-        output_fields=['title']  # Include title field in result
+        output_fields=['dict_id']  # Include title field in result
     )
-    end = time.time()
+
+    output = []
 
     # print hits
-    for hits_i, hits in enumerate(res):
-        print('Title:', query)
-        print('Search Time:', end-start)
-        print('Results:')
+    for hits in res:
+        # print('Title:', query)
+        # print('Search Time:', end-start)
+        # print('Results:')
         for hit in hits:
-            print( hit.entity.get('title'), '----', hit.distance)
-        print()
+            output.append(hit.entity.get('dict_id'))
+            # print( hit.entity.get('dict_id'), '----', hit.distance)
+    
+    return output
+    
+# print(search("Canadian Armed Forces operate various modern military vehicles, including the latest in armoured, recovery, engineering ."))
