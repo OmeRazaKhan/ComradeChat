@@ -79,9 +79,8 @@ class Parser:
             resources = None
 
             try:
-                #url = entry["dataset_url"]
-                url = "Temporary test URL: https://google.com"
-                description = current_dataset["description"]
+                url = current_dataset["dataset_url"]
+                description = current_dataset["dataset_description"]
             except KeyError:
                 print("Warning: Could not load id={} into database - missing \"url\" or \"description\" key".format(id, metadata_file_path))
                 continue

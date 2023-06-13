@@ -206,7 +206,7 @@ class DataScraper(Scraper):
         except Exception as e:
             raise e
 
-    def _parse_information_panel(self, title_panel) -> dict:
+    def _parse_resource_information_panel(self, title_panel) -> dict:
         """
         Extracts all relevant information from the title panel in a resource item.
         """
@@ -238,21 +238,21 @@ class DataScraper(Scraper):
         information_tags["miscellaneous"] = miscellaneous_info
         return information_tags
 
-    def _parse_dataset_url(self, download_panel) -> str:
+    def _parse_resource_url(self, download_resource_panel) -> str:
         """
-        Returns the URL to download the dataset.
+        Returns the URL to download a resource which is relevant to the dataset.
         """
         # print(download_panel.text)
-        anchor_tags = download_panel.find_elements(
+        anchor_tags = download_resource_panel.find_elements(
             by=By.XPATH, value=".//*//a")
         for anchor_tag in anchor_tags:
             text = self._strip_html_tags(anchor_tag.text)
             if text == "Download":
                 return anchor_tag.get_attribute("href")
 
-    def _scrape_datasets(self) -> list:
+    def _scrape_resources(self) -> list:
         """
-        Scrapes the datasets from the webpage.
+        Scrapes all resources relevant to the dataset from the webpage.
 
         Raises:
             Warning.
@@ -261,26 +261,28 @@ class DataScraper(Scraper):
         Returns:
             (list): A list of all datasets on the webpage.
         """
+
         try:
-            dataset_div = WebDriverWait(self._driver, 10).until(
+            resource_div = WebDriverWait(self._driver, 10).until(
                 EC.presence_of_element_located(
                     (By.ID, "dataset-resources"))
             )
-            dataset_ul = dataset_div.find_element(by=By.XPATH, value=".//ul")
-            datasets = []
-            WebDriverWait(dataset_div, 10).until(
+            resource_ul = resource_div.find_element(by=By.XPATH, value=".//ul")
+            all_resources = []
+            WebDriverWait(resource_div, 10).until(
                 EC.presence_of_element_located((By.XPATH, './*')))
-            resource_items = dataset_ul.find_elements(
+            resource_items = resource_ul.find_elements(
                 by=By.XPATH, value="./*")
             for resource_item in resource_items:
-                information_dict = dict()
+                resource_dict = dict()
                 title_panel, download_panel = resource_item.find_elements(
                     by=By.XPATH, value="./*")
-                information_dict = self._parse_information_panel(title_panel)
-                dataset_url = self._parse_dataset_url(download_panel)
-                information_dict["dataset_url"] = dataset_url
-                datasets.append(information_dict)
-            return datasets
+                resource_dict = self._parse_resource_information_panel(
+                    title_panel)
+                resource_url = self._parse_resource_url(download_panel)
+                resource_dict["resource_url"] = resource_url
+                all_resources.append(resource_dict)
+            return all_resources
 
         except Exception as e:
             raise e
@@ -290,6 +292,14 @@ class DataScraper(Scraper):
         Returns all necessary information from the dataset.
         """
         dataset = {}
+        dataset["dataset_url"] = self._dataset_url
+
+        try:
+            dataset["dataset_description"] = self._scrape_dataset_description_texts()
+        except Warning as e:
+            print(e)
+        except Exception as e:
+            print("Unable to scrape description.")
 
         try:
             dataset["keywords"] = self._scrape_keywords()
@@ -318,18 +328,11 @@ class DataScraper(Scraper):
             print("Unable to scrape temporal coverage.")
 
         try:
-            dataset["description"] = self._scrape_dataset_description_texts()
+            dataset["resources"] = self._scrape_resources()
         except Warning as e:
             print(e)
         except Exception as e:
-            print("Unable to scrape description.")
-
-        try:
-            dataset["data"] = self._scrape_datasets()
-        except Warning as e:
-            print(e)
-        except Exception as e:
-            print("Unable to scrape dataset data.")
+            print("Unable to scrape resource data.")
 
         return dataset
 

@@ -39,25 +39,32 @@ def scrape_urls(url_output_file_path: str, max_num_urls: int = None) -> list:
     return urls
 
 
-def scrape_datasets(urls: list, dataset_output_file_path: str) -> dict:
+def scrape_datasets(urls: list, dataset_output_file_path: str, max_num_datasets: int = None) -> dict:
     """
     Scrapes all datasets from the given urls and stores it in a JSON file.
 
     Params:
         urls (list): A list of URLs to datasets from which data should be scraped.
         dataset_output_file_path (str): The path to the JSON file where all scraped dataset information should be written.
+        max_num_datasets (int, default=None): The maximum number of datasets to obtain.
 
     Returns:
         (dict): All scraped web data.
     """
     all_data = {}
     print("Scraping Datasets")
+    num_datasets = len(urls)
+    if not max_num_datasets is None and max_num_datasets < num_datasets:
+        num_datasets = max_num_datasets
+
     for i in range(len(urls)):
         url = urls[i]
-        print("Progress: Row {} of {} - Scraping {}".format(i + 1, len(urls), url))
+        print("Progress: Row {} of {} - Scraping {}".format(i + 1, num_datasets, url))
         scraper = DataScraper(url)
         data = scraper.scrape()
         all_data[i + 1] = data
+        if i + 1 >= num_datasets:
+            break
     with open(dataset_output_file_path, "w", encoding="utf-8") as f:
         json.dump(all_data, f, indent=4)
     return all_data

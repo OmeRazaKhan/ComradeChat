@@ -19,13 +19,15 @@ class API:
         ids_to_descriptions = self._db.get_all_descriptions()
         # setup_db(ids_to_descriptions)
 
-    def generate_response(self, query: str, maximum_num_responses: int = 3) -> json:
+    def generate_response(self, query: str, maximum_num_responses: int = 3, throw_no_response_error: bool = False) -> json:
         """
         Generates a response to the user query.
 
         Params:
             query (str): The user's query.
             maximum_num_responses (int, default=3): The maximum number of responses that should be returned from the chatbot.
+            throw_no_response_error (bool, default=False): Temporary variable to test handling no response errors.
+                If this is set to True, this function will raise a NoResponseError.
 
         Raises:
             NoResponseError: If the query did not generate a response from the chatbot.
@@ -79,6 +81,8 @@ class API:
                     }
                 ]
         """
+        if throw_no_response_error:
+            raise NoResponseError("Placeholder text for NoResponseError")
 
         # ids = search("Insert query here")
         ids = [1, 6, 3]  # 1 is the most relevant, followed by

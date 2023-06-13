@@ -11,7 +11,7 @@ class Resource:
     Contains all relevant information for each dataset.
     """
 
-    def __init__(self, title: str = None, languages: list = None, file_type: SupportedFileType = None, url: str = None, miscellaneous: list = None):
+    def __init__(self, title: str = None, languages: list = None, file_type: str = None, url: str = None, miscellaneous: list = None):
         """
         Params:
             title (str, default=None): The title of the dataset.
@@ -24,7 +24,7 @@ class Resource:
         if type(languages) is str:
             languages = [languages]
         self._languages = languages
-        self._file_type = file_type.value
+        self._file_type = file_type
         self._url = url
         self._miscellaneous = miscellaneous
 
@@ -80,7 +80,7 @@ class MetaData:
         self._id = id
         self._description = description
         self._dataset_url = dataset_url
-        
+
         self._keywords = keywords
         self._subjects = subjects
         self._audience = audience
@@ -101,7 +101,7 @@ class MetaData:
         Description of the data.
         """
         return self._description
-    
+
     @property
     def dataset_url(self) -> str:
         """
