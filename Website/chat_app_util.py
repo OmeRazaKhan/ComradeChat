@@ -3,7 +3,7 @@ import dash
 from dash import html
 
 # contant for now, unless we want to import a library to dynamically get screen size...
-CONST_LENGTH = 40
+CONST_LENGTH = 60
 
 
 
