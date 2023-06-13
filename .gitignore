@@ -1,3 +1,4 @@
 *.log
 __pycache__
-resources/
+data.json
+urls.txt
