@@ -5,8 +5,6 @@ from dash import html
 # contant for now, unless we want to import a library to dynamically get screen size...
 CONST_LENGTH = 60
 
-
-
 # split a long string into smaller chunks
 def split_text(text):
     chunked = [""]
@@ -31,6 +29,7 @@ def split_text(text):
 def format_responses(response):
     formatted_res = []
     for r in response:
+        print(r)
         res_number = [
             html.P("Response # " + str(r["ranking"]), 
                    style={'text-align': 'left', "margin" : "1px"})

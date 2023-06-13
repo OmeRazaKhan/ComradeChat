@@ -2,56 +2,14 @@ import dash
 from dash import Dash, Input, Output, State
 from dash import html
 
-from chat_app_util import split_text, format_responses
 import dash_bootstrap_components as dbc
+
+from api.api import API
+from chat_app_util import split_text, format_responses
 
 app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 
-temp_res = [
-                {
-                    "ranking": 1,
-                    "dataset_id": 31,
-                    "dataset_url": "https://open.canada.ca/data/en/dataset/3ac0d080-6149-499a-8b06-7ce5f00ec56c",
-                    "dataset_description": "The description of the most relevant dataset to the user's query",
-                    "message": "A message outputted by the backend describing any information to the user if needed",
-                    "resources": [
-                        {
-                            "title": "Resource 1 title",
-                            "download_url": "https://open.canada.ca/data/dataset/id_31_dataset_1.csv",
-                            "data_format": "csv",
-                            "languages": [
-                                "en",
-                                "fr"
-                            ]
-                        },
-                        {
-                            "title": "Resource 2 title",
-                            "download_url": "https://open.canada.ca/data/dataset/id_31_dataset_2.json",
-                            "data_format": "json",
-                            "languages": [
-                                "en"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "ranking": 2,
-                    "dataset_id": 7,
-                    "dataset_url": "https://open.canada.ca/data/en/dataset/e33bcd95-d0e5-4ade-9f5c-78f0a5a4d7a0",
-                    "dataset_description": "The description of the most relevant dataset to the user's query",
-                    "message": "A message outputted by the backend describing any information to the user if needed",
-                    "resources": [
-                        {
-                            "title": "Resource 1 title",
-                            "download_url": "https://open.canada.ca/data/dataset/id_7_dataset_1.csv",
-                            "data_format": "csv",
-                            "languages": [
-                                "fr"
-                            ]
-                        }
-                    ]
-                }
-            ]
+api = API("resources/datasets.json")
 
 app.layout = html.Div(
     [
@@ -128,10 +86,7 @@ app.layout = html.Div(
     prevent_initial_call=True,
 )
 def process_message(n_clicks, history, text):
-    # Put the text processing/response stuff here?
-
-    # temporary place holder response
-    response_final = format_responses(temp_res)
+    response_final = format_responses(api.generate_response(text, maximum_num_responses=4))
 
     user_text = split_text(text)
     user_msg = [
