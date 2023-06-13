@@ -4,42 +4,13 @@
         "dataset_id": 31,
         "dataset_url": "https://open.canada.ca/data/en/dataset/3ac0d080-6149-499a-8b06-7ce5f00ec56c",
         "dataset_description": "The description of the most relevant dataset to the user's query",
-        "message": "A message outputted by the backend describing any information to the user if needed",
-        "resources": [
-            {
-                "title": "Resource 1 title",
-                "download_url": "https://open.canada.ca/data/dataset/id_31_dataset_1.csv",
-                "data_format": "csv",
-                "languages": [
-                    "en",
-                    "fr"
-                ]
-            },
-            {
-                "title": "Resource 2 title",
-                "download_url": "https://open.canada.ca/data/dataset/id_31_dataset_2.json",
-                "data_format": "json",
-                "languages": [
-                    "en"
-                ]
-            }
-        ]
+        "message": "A message outputted by the backend describing any information to the user if needed"
     },
     {
         "ranking": 2,
         "dataset_id": 7,
         "dataset_url": "https://open.canada.ca/data/en/dataset/e33bcd95-d0e5-4ade-9f5c-78f0a5a4d7a0",
         "dataset_description": "The description of the most relevant dataset to the user's query",
-        "message": "A message outputted by the backend describing any information to the user if needed",
-        "resources": [
-            {
-                "title": "Resource 1 title",
-                "download_url": "https://open.canada.ca/data/dataset/id_7_dataset_1.csv",
-                "data_format": "csv",
-                "languages": [
-                    "fr"
-                ]
-            }
-        ]
+        "message": "A message outputted by the backend describing any information to the user if needed"
     }
 ]

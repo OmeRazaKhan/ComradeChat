@@ -290,15 +290,50 @@ class DataScraper(Scraper):
         Returns all necessary information from the dataset.
         """
         dataset = {}
-        dataset["keywords"] = self._scrape_keywords()
-        dataset["subjects"] = self._scrape_subjects()
-        dataset["audience"] = self._scrape_audience()
-        dataset["temporal_coverage"] = self._scrape_temporal_coverage()
-        dataset["description"] = self._scrape_dataset_description_texts()
-        dataset["data"] = self._scrape_datasets()
+
+        try:
+            dataset["keywords"] = self._scrape_keywords()
+        except Warning as e:
+            print(e)
+        except Exception as e:
+            print("Unable to scrape keywords.")
+
+        try:
+            dataset["subjects"] = self._scrape_subjects()
+        except Warning as e:
+            print(e)
+
+        try:
+            dataset["audience"] = self._scrape_audience()
+        except Warning as e:
+            print(e)
+        except Exception as e:
+            print("Unable to scrape audience.")
+
+        try:
+            dataset["temporal_coverage"] = self._scrape_temporal_coverage()
+        except Warning as e:
+            print(e)
+        except Exception as e:
+            print("Unable to scrape temporal coverage.")
+
+        try:
+            dataset["description"] = self._scrape_dataset_description_texts()
+        except Warning as e:
+            print(e)
+        except Exception as e:
+            print("Unable to scrape description.")
+
+        try:
+            dataset["data"] = self._scrape_datasets()
+        except Warning as e:
+            print(e)
+        except Exception as e:
+            print("Unable to scrape dataset data.")
+
         return dataset
 
-    def scrape(self) -> list:
+    def scrape(self) -> dict:
         """
         Scrapes all necessary information from the dataset.
         """
