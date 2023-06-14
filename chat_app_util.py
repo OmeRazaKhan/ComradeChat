@@ -5,8 +5,13 @@ from dash import html
 # contant for now, unless we want to import a library to dynamically get screen size...
 CONST_LENGTH = 60
 
+# some descriptions are a list of sentences, join them into one
+def concat_string_list(text):
+    return " ".join(text)
+
 # split a long string into smaller chunks
 def split_text(text):
+    
     chunked = [""]
     if len(text) < CONST_LENGTH:
         return [text]
@@ -28,14 +33,15 @@ def split_text(text):
 # given a JSON response, format it ina  way that will be nice to display
 def format_responses(response):
     formatted_res = []
-    for r in response:
-        print(r)
+    for index, r in enumerate(response):
         res_number = [
-            html.P("Response # " + str(r["ranking"]), 
+            html.P("Response # " + str(index + 1), 
                    style={'text-align': 'left', "margin" : "1px"})
         ]
         
-        res_message = split_text(r["message"])
+        # not quite sure which we should be using at the moment
+        res_message = split_text(concat_string_list(r["dataset_description"]))
+        # res_message = split_text((r["message"]))
         res_message = [
             html.P(html.I(res),
                    style={'text-align': 'left', "margin" : "1px"})
