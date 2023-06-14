@@ -66,6 +66,7 @@ class Parser:
             datasets = json.load(f)
 
         all_metadata = {}
+        print("Current description mode: Converting all strings into lists")
 
         # Load the metadata for each key.
         for id in datasets:
@@ -82,6 +83,8 @@ class Parser:
             try:
                 url = current_dataset["dataset_url"]
                 description = current_dataset["dataset_description"]
+                if type(description) == str:
+                    description = [description]
             except KeyError:
                 print("Warning: Could not load id={} into database - missing \"url\" or \"description\" key".format(id, metadata_file_path))
                 continue

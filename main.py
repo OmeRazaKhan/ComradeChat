@@ -10,8 +10,8 @@ if __name__ == "__main__":
     #urls = []
     # with open("resources/urls.txt", "r") as f:
     #    for line in f:
-    #
-    #        #Chop newline character if needed
+
+    #        # Chop newline character if needed
     #        if line[len(line) - 1] == "\n":
     #            urls.append(line[:len(line) - 1])
     #        else:
