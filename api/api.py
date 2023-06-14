@@ -18,7 +18,6 @@ class API:
         all_metadata = parser.parse(json_dataset_file_path)
         self._db = Database(all_metadata)
         ids_to_descriptions = self._db.get_all_descriptions()
-        print(ids_to_descriptions)
         setup_db(ids_to_descriptions)
 
     def _create_response(self, relevant_response_ids: list) -> json:
