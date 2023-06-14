@@ -32,17 +32,21 @@ class API:
             (json): The JSON response to the query.
         """
         rankings = [i for i in range(1, len(relevant_response_ids) + 1)]
-        dataset_urls = [self._db.get_dataset_url(
-            id) for id in relevant_response_ids]
-        dataset_descriptions = [self._db.get_description(
-            id) for id in relevant_response_ids]
-        resources = [self._db.get_resources(id)
-                     for id in relevant_response_ids]
+        dataset_urls = [self._db.get_dataset_url(id) for id in relevant_response_ids]
+        dataset_descriptions = [
+            self._db.get_description(id) for id in relevant_response_ids
+        ]
+        resources = [self._db.get_resources(id) for id in relevant_response_ids]
 
         responses = []
         for i in range(len(relevant_response_ids)):
             response = Response(
-                relevant_response_ids[i], rankings[i], dataset_urls[i], dataset_descriptions[i], resources[i])
+                relevant_response_ids[i],
+                rankings[i],
+                dataset_urls[i],
+                dataset_descriptions[i],
+                resources[i],
+            )
             responses.append(response.to_dict())
         json_response = json.dumps(responses)
         json_response = json.loads(json_response)
@@ -113,7 +117,8 @@ class API:
         # ids = [2, 1]  # 1 is the most relevant, followed by
         if ids is None or len(ids) == 0:
             raise NoResponseError(
-                "The query {} did not generate any responses".format(query))
+                "The query {} did not generate any responses".format(query)
+            )
 
         response = self._create_response(ids)
         return response

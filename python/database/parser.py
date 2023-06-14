@@ -8,7 +8,6 @@ from python.database.metadata import Resource, MetaData
 
 
 class Parser:
-
     def __init__(self):
         pass
 
@@ -30,7 +29,6 @@ class Parser:
         parsed_resources = []
 
         for resource in all_resources:
-
             title = None
             languages = None
             file_type = None
@@ -48,7 +46,14 @@ class Parser:
             if "resource_url" in resource:
                 url = resource["resource_url"]
             parsed_resources.append(
-                Resource(title=title, languages=languages, file_type=file_type, url=url, miscellaneous=miscellaneous))
+                Resource(
+                    title=title,
+                    languages=languages,
+                    file_type=file_type,
+                    url=url,
+                    miscellaneous=miscellaneous,
+                )
+            )
         return parsed_resources
 
     def parse(self, metadata_file_path: str) -> dict:
@@ -82,9 +87,13 @@ class Parser:
             try:
                 url = current_dataset["dataset_url"]
                 description = current_dataset["dataset_description"]
-                
+
             except KeyError:
-                print("Warning: Could not load id={} into database - missing \"url\" or \"description\" key".format(id, metadata_file_path))
+                print(
+                    'Warning: Could not load id={} into database - missing "url" or "description" key'.format(
+                        id, metadata_file_path
+                    )
+                )
                 continue
 
             if "keywords" in current_dataset:
@@ -99,7 +108,16 @@ class Parser:
             if "resources" in current_dataset:
                 resource_entry = current_dataset["resources"]
                 resources = self._parse_resources(resource_entry)
-            metadata = MetaData(dataset_id, description, url, keywords=keywords, subjects=subjects,
-                                audience=audience, start_date=start, end_date=end, resources=resources)
+            metadata = MetaData(
+                dataset_id,
+                description,
+                url,
+                keywords=keywords,
+                subjects=subjects,
+                audience=audience,
+                start_date=start,
+                end_date=end,
+                resources=resources,
+            )
             all_metadata[dataset_id] = metadata
         return all_metadata

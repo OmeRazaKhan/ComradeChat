@@ -8,10 +8,18 @@ class Response:
     Contains all relevant information to a user's query.
     """
 
-    def __init__(self, id: int, ranking: int, dataset_url: str, dataset_description: str, resources: list, message: str = None):
+    def __init__(
+        self,
+        id: int,
+        ranking: int,
+        dataset_url: str,
+        dataset_description: str,
+        resources: list,
+        message: str = None,
+    ):
         """
         Params:
-            id (int): The id 
+            id (int): The id
         """
         self._id = id
         self._ranking = ranking

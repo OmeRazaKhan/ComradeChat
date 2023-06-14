@@ -5,7 +5,11 @@ from python.scrapers.dataset_scraper import DataScraper
 from python.scrapers.config import FIRST_PAGE_OPEN_DATA_PORTAL_URL
 
 
-def scrape_all_data(url_output_file_path: str, dataset_output_file_path: str, max_num_datasets: int = None):
+def scrape_all_data(
+    url_output_file_path: str,
+    dataset_output_file_path: str,
+    max_num_datasets: int = None,
+):
     """
     Scrapes all website data.
 
@@ -31,15 +35,16 @@ def scrape_urls(url_output_file_path: str, max_num_urls: int = None) -> list:
         (list): A list of all URLs leading to datasets in the open search portal.
     """
     scraper = UrlScraper()
-    urls = scraper.get_all_dataset_urls(
-        FIRST_PAGE_OPEN_DATA_PORTAL_URL, max_num_urls)
+    urls = scraper.get_all_dataset_urls(FIRST_PAGE_OPEN_DATA_PORTAL_URL, max_num_urls)
     with open(url_output_file_path, "w", encoding="utf-8") as f:
         for url in urls:
             f.write(url + "\n")
     return urls
 
 
-def scrape_datasets(urls: list, dataset_output_file_path: str, max_num_datasets: int = None) -> dict:
+def scrape_datasets(
+    urls: list, dataset_output_file_path: str, max_num_datasets: int = None
+) -> dict:
     """
     Scrapes all datasets from the given urls and stores it in a JSON file.
 

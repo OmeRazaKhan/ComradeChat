@@ -19,7 +19,9 @@ class DataScraper(Scraper):
     Scrapes all relevant information from a URL containing a dataset.
     """
 
-    def __init__(self, dataset_url: str, crawl_delay: float = config.DEFAULT_CRAWL_DELAY):
+    def __init__(
+        self, dataset_url: str, crawl_delay: float = config.DEFAULT_CRAWL_DELAY
+    ):
         """
         Params:
             dataset_url(str): The URL of the dataset.
@@ -63,16 +65,19 @@ class DataScraper(Scraper):
         try:
             keywords_div = WebDriverWait(self._driver, 10).until(
                 EC.presence_of_element_located(
-                    (By.XPATH, "/html/body/div/div/main/div[2]/aside/div[2]/ul/li[2]"))
+                    (By.XPATH, "/html/body/div/div/main/div[2]/aside/div[2]/ul/li[2]")
+                )
             )
             keyword_title_path = keywords_div.find_element(
-                by=By.XPATH, value="./strong")
+                by=By.XPATH, value="./strong"
+            )
             if not "Keyword" in keyword_title_path.text:
                 raise Warning("Did not find keyword section")
             keywords = []
             keywords_ul = keywords_div.find_element(by=By.XPATH, value="./ul")
             WebDriverWait(keywords_ul, 10).until(
-                EC.presence_of_element_located((By.XPATH, './*')))
+                EC.presence_of_element_located((By.XPATH, "./*"))
+            )
             keywords_li = keywords_ul.find_elements(by=By.XPATH, value="./*")
             for keyword_li in keywords_li:
                 keyword_text = keyword_li.text
@@ -96,16 +101,19 @@ class DataScraper(Scraper):
         try:
             subjects_div = WebDriverWait(self._driver, 10).until(
                 EC.presence_of_element_located(
-                    (By.XPATH, "/html/body/div/div/main/div[2]/aside/div[2]/ul/li[3]"))
+                    (By.XPATH, "/html/body/div/div/main/div[2]/aside/div[2]/ul/li[3]")
+                )
             )
             subject_title_path = subjects_div.find_element(
-                by=By.XPATH, value="./strong")
+                by=By.XPATH, value="./strong"
+            )
             if not "Subject" in subject_title_path.text:
                 raise Warning("Did not find subject section")
             subjects = []
             subjects_ul = subjects_div.find_element(by=By.XPATH, value="./ul")
             WebDriverWait(subjects_ul, 10).until(
-                EC.presence_of_element_located((By.XPATH, './*')))
+                EC.presence_of_element_located((By.XPATH, "./*"))
+            )
             subjects_li = subjects_ul.find_elements(by=By.XPATH, value="./*")
             for subject_li in subjects_li:
                 subject_text = subject_li.text
@@ -129,17 +137,19 @@ class DataScraper(Scraper):
         try:
             audiences_div = WebDriverWait(self._driver, 10).until(
                 EC.presence_of_element_located(
-                    (By.XPATH, "/html/body/div/div/main/div[2]/aside/div[2]/ul/li[4]"))
+                    (By.XPATH, "/html/body/div/div/main/div[2]/aside/div[2]/ul/li[4]")
+                )
             )
             audiences_title_path = audiences_div.find_element(
-                by=By.XPATH, value="./strong")
+                by=By.XPATH, value="./strong"
+            )
             if not "Audience" in audiences_title_path.text:
                 raise Warning("Did not find audience section")
             audiences = []
-            audiences_ul = audiences_div.find_element(
-                by=By.XPATH, value="./ul")
+            audiences_ul = audiences_div.find_element(by=By.XPATH, value="./ul")
             WebDriverWait(audiences_ul, 10).until(
-                EC.presence_of_element_located((By.XPATH, './*')))
+                EC.presence_of_element_located((By.XPATH, "./*"))
+            )
             audiences_li = audiences_ul.find_elements(by=By.XPATH, value="./*")
             for audience_li in audiences_li:
                 audience_text = audience_li.text
@@ -163,14 +173,17 @@ class DataScraper(Scraper):
         try:
             temporal_coverage_div = WebDriverWait(self._driver, 10).until(
                 EC.presence_of_element_located(
-                    (By.XPATH, "/html/body/div/div/main/div[2]/aside/div[2]/ul/li[11]"))
+                    (By.XPATH, "/html/body/div/div/main/div[2]/aside/div[2]/ul/li[11]")
+                )
             )
             temporal_coverage_title_path = temporal_coverage_div.find_element(
-                by=By.XPATH, value="./b")
+                by=By.XPATH, value="./b"
+            )
             if not "Temporal Coverage" in temporal_coverage_title_path.text:
                 raise Warning("Did not find temporal coverage section")
             temporal_coverage_field = temporal_coverage_div.find_element(
-                by=By.XPATH, value="./small")
+                by=By.XPATH, value="./small"
+            )
             temporal_coverage_text = temporal_coverage_field.text
             temporal_coverage = self._strip_html_tags(temporal_coverage_text)
             return temporal_coverage
@@ -190,14 +203,15 @@ class DataScraper(Scraper):
         """
         try:
             description_div = WebDriverWait(self._driver, 10).until(
-                EC.presence_of_element_located(
-                    (By.ID, "resource-desc"))
+                EC.presence_of_element_located((By.ID, "resource-desc"))
             )
             description_paragraphs = []
             WebDriverWait(description_div, 10).until(
-                EC.presence_of_element_located((By.XPATH, './*')))
+                EC.presence_of_element_located((By.XPATH, "./*"))
+            )
             description_children = description_div.find_elements(
-                by=By.XPATH, value="./*")
+                by=By.XPATH, value="./*"
+            )
             for child in description_children:
                 child_text = child.text
                 child = self._strip_html_tags(child_text)
@@ -211,12 +225,14 @@ class DataScraper(Scraper):
         Extracts all relevant information from the title panel in a resource item.
         """
         title_element, information_tag_div = title_panel.find_elements(
-            by=By.XPATH, value="./*")
+            by=By.XPATH, value="./*"
+        )
         title = self._strip_html_tags(title_element.text)
         languages = []
         miscellaneous_info = []
         recognized_dataset_extensions = [
-            extension.value for extension in DatasetExtensions]
+            extension.value for extension in DatasetExtensions
+        ]
         file_type = None
         for child in information_tag_div.find_elements(by=By.XPATH, value="./*"):
             classes = child.get_attribute("class")
@@ -225,8 +241,11 @@ class DataScraper(Scraper):
                 languages.append(text)
             elif text.lower() in recognized_dataset_extensions:
                 if not file_type is None:
-                    print("Warning: Multiple file types detected: {} and {}".format(
-                        file_type, text.lower()))
+                    print(
+                        "Warning: Multiple file types detected: {} and {}".format(
+                            file_type, text.lower()
+                        )
+                    )
                 file_type = text
             else:
                 miscellaneous_info.append(text)
@@ -244,7 +263,8 @@ class DataScraper(Scraper):
         """
         # print(download_panel.text)
         anchor_tags = download_resource_panel.find_elements(
-            by=By.XPATH, value=".//*//a")
+            by=By.XPATH, value=".//*//a"
+        )
         for anchor_tag in anchor_tags:
             text = self._strip_html_tags(anchor_tag.text)
             if text == "Download":
@@ -264,21 +284,20 @@ class DataScraper(Scraper):
 
         try:
             resource_div = WebDriverWait(self._driver, 10).until(
-                EC.presence_of_element_located(
-                    (By.ID, "dataset-resources"))
+                EC.presence_of_element_located((By.ID, "dataset-resources"))
             )
             resource_ul = resource_div.find_element(by=By.XPATH, value=".//ul")
             all_resources = []
             WebDriverWait(resource_div, 10).until(
-                EC.presence_of_element_located((By.XPATH, './*')))
-            resource_items = resource_ul.find_elements(
-                by=By.XPATH, value="./*")
+                EC.presence_of_element_located((By.XPATH, "./*"))
+            )
+            resource_items = resource_ul.find_elements(by=By.XPATH, value="./*")
             for resource_item in resource_items:
                 resource_dict = dict()
                 title_panel, download_panel = resource_item.find_elements(
-                    by=By.XPATH, value="./*")
-                resource_dict = self._parse_resource_information_panel(
-                    title_panel)
+                    by=By.XPATH, value="./*"
+                )
+                resource_dict = self._parse_resource_information_panel(title_panel)
                 resource_url = self._parse_resource_url(download_panel)
                 resource_dict["resource_url"] = resource_url
                 all_resources.append(resource_dict)
@@ -340,8 +359,7 @@ class DataScraper(Scraper):
         """
         Scrapes all necessary information from the dataset.
         """
-        self._driver = webdriver.Firefox(
-            executable_path=config.SELENIUM_DRIVER_PATH)
+        self._driver = webdriver.Firefox(executable_path=config.SELENIUM_DRIVER_PATH)
 
         self._driver.get(self.dataset_url)
         time.sleep(self.crawl_delay)

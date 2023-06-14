@@ -12,7 +12,14 @@ class Resource:
     Contains all relevant information for each dataset.
     """
 
-    def __init__(self, title: str = None, languages: list = None, file_type: str = None, url: str = None, miscellaneous: list = None):
+    def __init__(
+        self,
+        title: str = None,
+        languages: list = None,
+        file_type: str = None,
+        url: str = None,
+        miscellaneous: list = None,
+    ):
         """
         Params:
             title (str, default=None): The title of the dataset.
@@ -87,8 +94,18 @@ class MetaData:
     Contains all metadata for each website scraped.
     """
 
-    def __init__(self, id: int, description: str, dataset_url: str, keywords: list = None, subjects: list = None,
-                 audience: list = None, start_date: datetime = None, end_date: datetime = None, resources: list = None):
+    def __init__(
+        self,
+        id: int,
+        description: str,
+        dataset_url: str,
+        keywords: list = None,
+        subjects: list = None,
+        audience: list = None,
+        start_date: datetime = None,
+        end_date: datetime = None,
+        resources: list = None,
+    ):
         """
         Params:
             id (int): A unique identifier used to reference the MetaData.

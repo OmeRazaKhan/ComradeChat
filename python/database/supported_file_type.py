@@ -8,6 +8,7 @@ class SupportedFileType(Enum):
     """
     All supported file types for datasets.
     """
+
     CSV = "csv"
     HTML = "html"
     JSON = "json"

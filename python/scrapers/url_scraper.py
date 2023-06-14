@@ -1,4 +1,3 @@
-
 import time
 import re
 from selenium.webdriver.support import expected_conditions as EC
@@ -67,14 +66,17 @@ class UrlScraper(Scraper):
         try:
             last_page_button = WebDriverWait(self._driver, 10).until(
                 EC.presence_of_element_located(
-                    (By.XPATH, '/html/body/main/div[1]/div[3]/div[13]/div/ul/li[7]/a'))
+                    (By.XPATH, "/html/body/main/div[1]/div[3]/div[13]/div/ul/li[7]/a")
+                )
             )
             number = self._get_button_number(last_page_button)
             return number
         except Exception as e:
             raise e
 
-    def _generate_all_search_portal_urls(self, first_page_url: str, total_pages: int) -> list:
+    def _generate_all_search_portal_urls(
+        self, first_page_url: str, total_pages: int
+    ) -> list:
         """
         Generates the URL to all search index URLs on the open data portal.
 
@@ -104,37 +106,40 @@ class UrlScraper(Scraper):
         Returns:
             (list): The list of all URLs leading to a dataset on the Open Portal.
         """
-        self._driver = webdriver.Firefox(
-            executable_path=config.SELENIUM_DRIVER_PATH)
+        self._driver = webdriver.Firefox(executable_path=config.SELENIUM_DRIVER_PATH)
 
         # Obtain the URLs to all main pages in the search portal.
         total_pages = self._get_num_search_pages(first_page_url)
         search_portal_urls = self._generate_all_search_portal_urls(
-            first_page_url, total_pages)
+            first_page_url, total_pages
+        )
 
         all_dataset_urls = []
 
         total_dataset_urls_generated = 0
         for search_portal_url in search_portal_urls:
-
             self._driver.get(search_portal_url)
             time.sleep(self.crawl_delay)
             try:
                 root_div = WebDriverWait(self._driver, 10).until(
                     EC.presence_of_element_located(
-                        (By.XPATH, '/html/body/main/div[1]/div[3]'))
+                        (By.XPATH, "/html/body/main/div[1]/div[3]")
+                    )
                 )
             except Exception as e:
                 print("Element not found")
                 print(str(e))
 
             anchors = root_div.find_elements(by=By.XPATH, value=".//a")
-            urls = [anchor.get_attribute('href') for anchor in anchors]
+            urls = [anchor.get_attribute("href") for anchor in anchors]
             for url in urls:
                 if self._is_dataset_url(url):
                     all_dataset_urls.append(url)
                     total_dataset_urls_generated += 1
-                    if not max_urls is None and total_dataset_urls_generated == max_urls:
+                    if (
+                        not max_urls is None
+                        and total_dataset_urls_generated == max_urls
+                    ):
                         break
 
             if not max_urls is None and total_dataset_urls_generated == max_urls:

@@ -2,6 +2,7 @@ from abc import ABC
 
 import python.scrapers.config as config
 
+
 class Scraper(ABC):
     """
     Performs all scraping operations on the open source data portal.

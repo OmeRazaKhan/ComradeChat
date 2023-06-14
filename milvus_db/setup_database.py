@@ -5,19 +5,18 @@ from sentence_transformers import SentenceTransformer
 import milvus_db.config as config
 import pandas as pd
 
+
 # extract embeding from text using huggingface
 def embed_insert(data, collection) -> None:
     # load in transformer
-    transformer = SentenceTransformer('all-MiniLM-L6-v2')
+    transformer = SentenceTransformer("all-MiniLM-L6-v2")
 
     # There has to be multiple descriptions in array
     embeds = transformer.encode(data[1])
 
-    ins = [
-            data[0],
-            [x for x in embeds]
-    ]
+    ins = [data[0], [x for x in embeds]]
     collection.insert(ins)
+
 
 def setup_db(data) -> None:
     # connect to server
@@ -29,10 +28,10 @@ def setup_db(data) -> None:
 
     # create collection which includes the id, title, and embedding.
     fields = [
-        FieldSchema(name='id', dtype=DataType.INT64, is_primary=True, auto_id=True),
-        FieldSchema(name='dict_id', dtype=DataType.INT64),  # id from dictionary
+        FieldSchema(name="id", dtype=DataType.INT64, is_primary=True, auto_id=True),
+        FieldSchema(name="dict_id", dtype=DataType.INT64),  # id from dictionary
         # FieldSchema(name='title', dtype=DataType.VARCHAR, max_length=1000),  # VARCHARS need a maximum length, so for this example they are set to 200 characters
-        FieldSchema(name='embedding', dtype=DataType.FLOAT_VECTOR, dim=384)
+        FieldSchema(name="embedding", dtype=DataType.FLOAT_VECTOR, dim=384),
     ]
 
     schema = CollectionSchema(fields=fields)
@@ -40,9 +39,9 @@ def setup_db(data) -> None:
 
     # create indices for database
     index_params = {
-        'metric_type':'L2',
-        'index_type':"IVF_FLAT",
-        'params':{'nlist': 1536}
+        "metric_type": "L2",
+        "index_type": "IVF_FLAT",
+        "params": {"nlist": 1536},
     }
 
     # create indices for database
@@ -51,12 +50,13 @@ def setup_db(data) -> None:
 
     # insert into database
     for index, data in data.items():
-        data_batch = [[],[]]
-        
+        data_batch = [[], []]
+
         data_batch[0].append(int(index))
         data_batch[1].append(data)
-        
+
         embed_insert(data_batch, collection)
+
 
 # data = {
 #     "1": "Binder used by the Chief of the Defence Staff to support his appearance on Arctic Security in front of the House Standing Committee on National Defence.",

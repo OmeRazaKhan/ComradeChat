@@ -8,50 +8,43 @@ import dash_bootstrap_components as dbc
 app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 temp_res = [
-                {
-                    "ranking": 1,
-                    "dataset_id": 31,
-                    "dataset_url": "https://open.canada.ca/data/en/dataset/3ac0d080-6149-499a-8b06-7ce5f00ec56c",
-                    "dataset_description": "The description of the most relevant dataset to the user's query",
-                    "message": "A message outputted by the backend describing any information to the user if needed",
-                    "resources": [
-                        {
-                            "title": "Resource 1 title",
-                            "download_url": "https://open.canada.ca/data/dataset/id_31_dataset_1.csv",
-                            "data_format": "csv",
-                            "languages": [
-                                "en",
-                                "fr"
-                            ]
-                        },
-                        {
-                            "title": "Resource 2 title",
-                            "download_url": "https://open.canada.ca/data/dataset/id_31_dataset_2.json",
-                            "data_format": "json",
-                            "languages": [
-                                "en"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "ranking": 2,
-                    "dataset_id": 7,
-                    "dataset_url": "https://open.canada.ca/data/en/dataset/e33bcd95-d0e5-4ade-9f5c-78f0a5a4d7a0",
-                    "dataset_description": "The description of the most relevant dataset to the user's query",
-                    "message": "A message outputted by the backend describing any information to the user if needed",
-                    "resources": [
-                        {
-                            "title": "Resource 1 title",
-                            "download_url": "https://open.canada.ca/data/dataset/id_7_dataset_1.csv",
-                            "data_format": "csv",
-                            "languages": [
-                                "fr"
-                            ]
-                        }
-                    ]
-                }
-            ]
+    {
+        "ranking": 1,
+        "dataset_id": 31,
+        "dataset_url": "https://open.canada.ca/data/en/dataset/3ac0d080-6149-499a-8b06-7ce5f00ec56c",
+        "dataset_description": "The description of the most relevant dataset to the user's query",
+        "message": "A message outputted by the backend describing any information to the user if needed",
+        "resources": [
+            {
+                "title": "Resource 1 title",
+                "download_url": "https://open.canada.ca/data/dataset/id_31_dataset_1.csv",
+                "data_format": "csv",
+                "languages": ["en", "fr"],
+            },
+            {
+                "title": "Resource 2 title",
+                "download_url": "https://open.canada.ca/data/dataset/id_31_dataset_2.json",
+                "data_format": "json",
+                "languages": ["en"],
+            },
+        ],
+    },
+    {
+        "ranking": 2,
+        "dataset_id": 7,
+        "dataset_url": "https://open.canada.ca/data/en/dataset/e33bcd95-d0e5-4ade-9f5c-78f0a5a4d7a0",
+        "dataset_description": "The description of the most relevant dataset to the user's query",
+        "message": "A message outputted by the backend describing any information to the user if needed",
+        "resources": [
+            {
+                "title": "Resource 1 title",
+                "download_url": "https://open.canada.ca/data/dataset/id_7_dataset_1.csv",
+                "data_format": "csv",
+                "languages": ["fr"],
+            }
+        ],
+    },
+]
 
 app.layout = html.Div(
     [
@@ -95,7 +88,7 @@ app.layout = html.Div(
                                                     "Send",
                                                     id="send_button",
                                                     type="submit",
-                                                    #style={"width": "100%"},
+                                                    # style={"width": "100%"},
                                                 )
                                             ],
                                             style={"width": "100%", "valign": "middle"},
@@ -113,6 +106,7 @@ app.layout = html.Div(
         ),
     ]
 )
+
 
 # callback for when user sends a message
 @app.callback(
@@ -135,7 +129,7 @@ def process_message(n_clicks, history, text):
 
     user_text = split_text(text)
     user_msg = [
-        html.P(user, style={'text-align': 'right', "margin" : "1px"}) 
+        html.P(user, style={"text-align": "right", "margin": "1px"})
         for user in user_text
     ]
 
@@ -144,12 +138,13 @@ def process_message(n_clicks, history, text):
         return (
             response_final
             + ["ComradeChat Bot:"]
-            + user_msg +
-            [html.Hr(style={'width': '100%'})] +
-            history,
-            ''
+            + user_msg
+            + [html.Hr(style={"width": "100%"})]
+            + history,
+            "",
         )
-    return response_final + ["ComradeChat Bot:"] + user_msg, ''
+    return response_final + ["ComradeChat Bot:"] + user_msg, ""
+
 
 # run Dash app
 if __name__ == "__main__":

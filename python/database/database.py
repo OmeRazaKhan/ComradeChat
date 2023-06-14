@@ -4,7 +4,6 @@ Module providing a method of interacting with the data scraped from the open sea
 
 
 class Database:
-
     def __init__(self, ids_to_metadata: dict):
         self._ids_to_metadata = ids_to_metadata
 
