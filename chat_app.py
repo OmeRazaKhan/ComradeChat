@@ -88,15 +88,17 @@ def process_message(n_clicks, history, text):
     response_final = format_responses(api.generate_response(text, maximum_num_responses=4))
 
     user_text = split_text(text)
+    user_text.reverse()
+    user = "".join(user_text)
     user_msg = [
         html.P(user, style={'text-align': 'right',
                             "border-radius": "15px",
                             "background-color": "rgb(52, 58, 64)",
                             "color": "white",
                             "padding": "10px",
-                            "margin-left": "auto"}
+                            "margin-left": "auto"
+                            }
         ) 
-        for user in user_text
     ]
 
     response_final.reverse()
@@ -105,7 +107,10 @@ def process_message(n_clicks, history, text):
                             "background-color": "rgb(232, 232, 232)",
                             "color": "#212529",
                             "padding": "10px",
-                            "margin-right": "auto"})]
+                            "margin-right": "auto"
+                            }
+                    )
+    ]
 
     if history:
         # order reversed so new lines always appear at the bottom in combiantion with CSS
