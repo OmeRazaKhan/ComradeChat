@@ -1,4 +1,3 @@
-import dash
 from dash import Dash, Input, Output, State
 from dash import html
 
@@ -7,7 +6,7 @@ import dash_bootstrap_components as dbc
 from api.api import API
 from chat_app_util import split_text, format_responses
 
-app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 api = API("resources/datasets.json")
 
@@ -39,7 +38,7 @@ app.layout = html.Div(
                                             [
                                                 dbc.Input(
                                                     id="msg_input",
-                                                    placeholder="Type Here . . .",
+                                                    placeholder="Type Here...",
                                                     type="text",
                                                     style={"width": "80%"},
                                                 )
@@ -53,7 +52,7 @@ app.layout = html.Div(
                                                     "Send",
                                                     id="send_button",
                                                     type="submit",
-                                                    #style={"width": "100%"},
+                                                    style={"width": "100%"},
                                                 )
                                             ],
                                             style={"width": "100%", "valign": "middle"},
@@ -88,10 +87,30 @@ app.layout = html.Div(
 def process_message(n_clicks, history, text):
     response_final = format_responses(api.generate_response(text, maximum_num_responses=4))
 
-    user_text = split_text(text)
+    # user_text = split_text(text)
+    # user_text.reverse()
+    # user = "".join(user_text)
+    user = text
     user_msg = [
-        html.P(user, style={'text-align': 'right', "margin" : "1px"}) 
-        for user in user_text
+        html.P(user, style={'text-align': 'right',
+                            "border-radius": "15px",
+                            "background-color": "rgb(52, 58, 64)",
+                            "color": "white",
+                            "padding": "10px",
+                            "margin-left": "auto"
+                            }
+        ) 
+    ]
+
+    response_final.reverse()
+    response_final = [html.P(response_final, style={'text-align': 'left',
+                            "border-radius": "15px",
+                            "background-color": "rgb(232, 232, 232)",
+                            "color": "#212529",
+                            "padding": "10px",
+                            "margin-right": "auto"
+                            }
+                    )
     ]
 
     if history:

@@ -1,7 +1,7 @@
 from python.database.parser import Parser
 from python.database.database import Database
-#from milvus_db.setup_database import setup_db
-#from milvus_db.predict import search
+from milvus_db.setup_database import setup_db
+from milvus_db.predict import search
 from api.exceptions import NoResponseError
 from api.response import Response
 
@@ -17,8 +17,9 @@ class API:
         parser = Parser()
         all_metadata = parser.parse(json_dataset_file_path)
         self._db = Database(all_metadata)
-        #ids_to_descriptions = self._db.get_all_descriptions()
-        # setup_db(ids_to_descriptions)
+        ids_to_descriptions = self._db.get_all_descriptions()
+        print(ids_to_descriptions)
+        setup_db(ids_to_descriptions)
 
     def _create_response(self, relevant_response_ids: list) -> json:
         """
@@ -109,8 +110,8 @@ class API:
                 ]
         """
 
-        # ids = search("Insert query here")
-        ids = [2, 1]  # 1 is the most relevant, followed by
+        ids = search(query)
+        # ids = [2, 1]  # 1 is the most relevant, followed by
         if ids is None or len(ids) == 0:
             raise NoResponseError(
                 "The query {} did not generate any responses".format(query))

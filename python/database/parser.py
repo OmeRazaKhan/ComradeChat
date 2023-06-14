@@ -41,7 +41,7 @@ class Parser:
                 title = resource["title"]
             if "languages" in resource:
                 languages = resource["languages"]
-            if "file_type" in resource:
+            if "file_type" in resource and not resource["file_type"] is None:
                 file_type = resource["file_type"].lower()
             if "miscellaneous" in resource:
                 miscellaneous = resource["miscellaneous"]

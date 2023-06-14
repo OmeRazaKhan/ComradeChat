@@ -10,6 +10,7 @@ def embed_insert(data, collection) -> None:
     # load in transformer
     transformer = SentenceTransformer('all-MiniLM-L6-v2')
 
+    # There has to be multiple descriptions in array
     embeds = transformer.encode(data[1])
 
     ins = [
