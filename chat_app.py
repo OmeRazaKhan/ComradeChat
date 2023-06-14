@@ -1,18 +1,18 @@
-from dash import Dash, Input, Output, State
-from dash import html
 
+# Importing Packages
+from dash import Dash, Input, Output, State, html
 import dash_bootstrap_components as dbc
 
 from api.api import API
-from chat_app_util import split_text, format_responses
+from chat_app_util import format_responses
 
-app = Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
-
+app = Dash(external_stylesheets=[dbc.themes.BOOTSTRAP],
+           assets_folder="assets")
 api = API("resources/datasets.json")
 
 app.layout = html.Div(
     [
-        html.H1("ComradeChat", style={"text-align": "center"}),
+        html.H1("ComradeChat", className="title"),
         html.Div(
             [
                 html.Div(
@@ -20,32 +20,24 @@ app.layout = html.Div(
                         html.Br(),
                         html.Div(
                             id="conversation",
-                            style={
-                                "max-height": "500px",
-                                "overflow-x": "hidden",
-                                "overflow-y": "scroll",
-                                "display": "flex",
-                                "flex-direction": "column-reverse",
-                            },
+                            className = "conversation"
                         ),
                         html.Br(),
                         html.Table(
                             [
                                 html.Tr(
                                     [
-                                        # user text input
                                         html.Td(
                                             [
                                                 dbc.Input(
                                                     id="msg_input",
                                                     placeholder="Type Here...",
                                                     type="text",
-                                                    style={"width": "80%"},
+                                                    className = "input"
                                                 )
                                             ],
-                                            style={"width": "100%", "valign": "middle"},
+                                            className = "input-bar"
                                         ),
-                                        # send user text
                                         html.Td(
                                             [
                                                 dbc.Button(
@@ -55,18 +47,18 @@ app.layout = html.Div(
                                                     style={"width": "100%"},
                                                 )
                                             ],
-                                            style={"width": "100%", "valign": "middle"},
-                                        ),
+                                            className = "input-bar"
+                                        )
                                     ]
                                 )
                             ]
-                        ),
+                        )
                     ],
-                    style={"margin": "0 auto"},
+                    className = "conversation-block"
                 )
             ],
             id="screen",
-            style={"width": "800px", "height": "500px", "margin": "0 auto"},
+            className = "screen"
         ),
     ]
 )
@@ -75,42 +67,23 @@ app.layout = html.Div(
 @app.callback(
     [
         Output("conversation", "children"),
-        Output("msg_input", "value"),
+        Output("msg_input", "value")
     ],
     [
         Input("send_button", "n_clicks"),
         State("conversation", "children"),
-        State("msg_input", "value"),
+        State("msg_input", "value")
     ],
-    prevent_initial_call=True,
+    prevent_initial_call=True
 )
 def process_message(n_clicks, history, text):
     response_final = format_responses(api.generate_response(text, maximum_num_responses=4))
-
-    # user_text = split_text(text)
-    # user_text.reverse()
-    # user = "".join(user_text)
-    user = text
     user_msg = [
-        html.P(user, style={'text-align': 'right',
-                            "border-radius": "15px",
-                            "background-color": "rgb(52, 58, 64)",
-                            "color": "white",
-                            "padding": "10px",
-                            "margin-left": "auto"
-                            }
-        ) 
+        html.P(text, className="user-msg") 
     ]
-
     response_final.reverse()
-    response_final = [html.P(response_final, style={'text-align': 'left',
-                            "border-radius": "15px",
-                            "background-color": "rgb(232, 232, 232)",
-                            "color": "#212529",
-                            "padding": "10px",
-                            "margin-right": "auto"
-                            }
-                    )
+    response_final = [
+        html.P(response_final, className = "generated-msg")
     ]
 
     if history:

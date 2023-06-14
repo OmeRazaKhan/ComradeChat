@@ -1,0 +1,49 @@
+.title {
+    text-align: center;
+}
+
+.conversation {
+    max-height: 500px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column-reverse;
+
+}
+
+.input {
+    width: 80%;
+}
+
+.input-bar {
+    width: 100%; 
+    vertical-align: middle;
+}
+
+.conversation-block {
+    margin: 0 auto;
+}
+
+.screen {
+    width: 800px; 
+    height: 500px; 
+    margin: 0 auto;
+}
+
+.user-msg {
+    text-align: right;
+    border-radius: 15px;
+    background-color: rgb(52, 58, 64);
+    color: white;
+    padding: 10px;
+    margin-left: auto;
+}
+
+.generated-msg {
+    text-align: left;
+    border-radius: 15px;
+    background-color: rgb(232, 232, 232);
+    color: #212529;
+    padding: 10px;
+    margin-right: auto;
+}

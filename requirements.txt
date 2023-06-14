@@ -16,8 +16,6 @@ fsspec==2023.6.0
 gdown==4.7.1
 gitdb==4.0.10
 GitPython==3.1.31
-grpcio==1.54.2
-grpcio-tools==1.54.2
 h11==0.14.0
 h2==4.1.0
 hpack==4.0.0
