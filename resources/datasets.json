@@ -153,7 +153,8 @@
     "3": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/0e94c5fd-42f1-4839-80e1-9a96e76c7cc0",
         "dataset_description": [
-            "This report provides information and statistics on the export of military goods and technology from Canada in a given calendar year."
+            "This report provides information and statistics on the export of military goods and technology from Canada in a given calendar year.",
+            ""
         ],
         "keywords": [
             "Military",
@@ -418,7 +419,8 @@
     "4": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/4378d795-1b5a-4bcf-af1d-5b38ef4dc777",
         "dataset_description": [
-            "Binder used by the Minister to support her appearance on culture change reforms in response to former Supreme Court Justice Arbour\u2019s recommendations in front of the House Standing Committee on National Defence."
+            "Binder used by the Minister to support her appearance on culture change reforms in response to former Supreme Court Justice Arbour\u2019s recommendations in front of the House Standing Committee on National Defence.",
+            ""
         ],
         "keywords": [
             "Independent External Comprehensive Review; culture evolution; support to survivors; governance and military justice"
@@ -458,7 +460,8 @@
     "5": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/c3893f29-43c7-4f34-ac7e-3ee8aefc2af1",
         "dataset_description": [
-            "The aim of this database is to record past military operations that the Canadian Forces have participated in around the world since 1945. Over 400 international operations have been identified so far, but the historical research required for each has not yet been completed. Substantive entries have been prepared for on-going operations; new operations will be added to the list as required."
+            "The aim of this database is to record past military operations that the Canadian Forces have participated in around the world since 1945. Over 400 international operations have been identified so far, but the historical research required for each has not yet been completed. Substantive entries have been prepared for on-going operations; new operations will be added to the list as required.",
+            ""
         ],
         "keywords": [
             "Canadian Forces Operations Domestic International Overseas"
@@ -497,7 +500,8 @@
     "6": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/8e012ef2-a95a-486c-8f97-ea6d2d483a4b",
         "dataset_description": [
-            "Chief Military Personnel (CMP) is responsible for the overall personnel management of the Canadian Armed Forces (CAF). They oversee recruitment, training, education, pay, benefits, health services, honours, history, casualty support, career transition services and a host of other corporate and personnel support services. This dataset outlines the minimum years of seniority required for promotion at various ranks."
+            "Chief Military Personnel (CMP) is responsible for the overall personnel management of the Canadian Armed Forces (CAF). They oversee recruitment, training, education, pay, benefits, health services, honours, history, casualty support, career transition services and a host of other corporate and personnel support services. This dataset outlines the minimum years of seniority required for promotion at various ranks.",
+            ""
         ],
         "keywords": [
             "Promotion",
@@ -561,7 +565,8 @@
     "7": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/f1cbadd7-66ae-42b0-9f8d-4f14a0c4f01b",
         "dataset_description": [
-            "Canadian Forces Housing Agency (CFHA) is the managing authority for the Department of National Defence residential housing portfolio. The dataset contains the Department of National Defence count of Residential Housing units."
+            "Canadian Forces Housing Agency (CFHA) is the managing authority for the Department of National Defence residential housing portfolio. The dataset contains the Department of National Defence count of Residential Housing units.",
+            ""
         ],
         "keywords": [
             "Military Housing",
@@ -606,7 +611,8 @@
     "8": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/5c990970-43ce-416e-8c38-6a233c61da52",
         "dataset_description": [
-            "Remote work introduces some challenges when trying to balance functionality with security. When working remotely, your employees need to access the same internal services, applications, and information that they would have access to in the office. However, your organization also needs to protect its systems and information, as remote work introduces new vulnerabilities. You need to implement additional security precautions to prevent threat actors from taking advantage of those vulnerabilities."
+            "Remote work introduces some challenges when trying to balance functionality with security. When working remotely, your employees need to access the same internal services, applications, and information that they would have access to in the office. However, your organization also needs to protect its systems and information, as remote work introduces new vulnerabilities. You need to implement additional security precautions to prevent threat actors from taking advantage of those vulnerabilities.",
+            ""
         ],
         "keywords": [
             "cyber defence",
@@ -657,7 +663,8 @@
     "9": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/72db8896-89d2-427f-8bf8-864601da36e7",
         "dataset_description": [
-            "Binder used by the Deputy Minister to support his appearance before the Standing Committee on Public Accounts to discuss National Defence efforts to reduce emissions under the Greening Government Strategy."
+            "Binder used by the Deputy Minister to support his appearance before the Standing Committee on Public Accounts to discuss National Defence efforts to reduce emissions under the Greening Government Strategy.",
+            ""
         ],
         "keywords": [
             "Arctic Security; Domestic and Continental Defence; Defence Spending; Procurement"
@@ -718,7 +725,8 @@
     "10": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/89b5bb71-47f1-42ae-a08f-a532a05a8773",
         "dataset_description": [
-            "As per the Policy on Service and Digital, VAC is releasing all Departmental Results Framework (DRF) eligible datasets to help to support greater transparency and accountability of the government institutions, while respecting information security, privacy, and legal considerations."
+            "As per the Policy on Service and Digital, VAC is releasing all Departmental Results Framework (DRF) eligible datasets to help to support greater transparency and accountability of the government institutions, while respecting information security, privacy, and legal considerations.",
+            ""
         ],
         "keywords": [
             "Departmental Results Framework",
@@ -770,7 +778,8 @@
     "11": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/95f6778b-0666-4a86-b968-7d96b7335065",
         "dataset_description": [
-            "Binder used by the Chief of the Defence Staff to support his appearance on Arctic Security in front of the House Standing Committee on National Defence."
+            "Binder used by the Chief of the Defence Staff to support his appearance on Arctic Security in front of the House Standing Committee on National Defence.",
+            ""
         ],
         "keywords": [
             "Personnel; domestic and continental security; international security; Indigenous; defence spending; procurement"
@@ -810,7 +819,8 @@
     "12": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/de4c9c42-40ea-4069-91e3-1951206e3b60",
         "dataset_description": [
-            "The dataset contains the list of sites across Canada where unexploded explosive ordnance have been located or may be present and are being assessed."
+            "The dataset contains the list of sites across Canada where unexploded explosive ordnance have been located or may be present and are being assessed.",
+            ""
         ],
         "keywords": [
             "Defence",
@@ -848,7 +858,8 @@
     "13": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/fb739176-4bca-4a24-9046-5bb164041e15",
         "dataset_description": [
-            "Suicide is a tragedy and an important public health concern. Suicide prevention is a top priority for the Canadian Armed Forces (CAF). Monitoring and analyzing suicide events of CAF members provides valuable information to guide and refine ongoing suicide prevention efforts. The dataset shows the comparison of CAF regular force male member\u2019s suicide rates by deployment history to Canadian rates using standardized mortality ratios from 1995 to 2019."
+            "Suicide is a tragedy and an important public health concern. Suicide prevention is a top priority for the Canadian Armed Forces (CAF). Monitoring and analyzing suicide events of CAF members provides valuable information to guide and refine ongoing suicide prevention efforts. The dataset shows the comparison of CAF regular force male member\u2019s suicide rates by deployment history to Canadian rates using standardized mortality ratios from 1995 to 2019.",
+            ""
         ],
         "keywords": [
             "Defence",
@@ -910,7 +921,8 @@
     "14": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/c19f1fbb-b74d-4902-831d-40cd00b0003d",
         "dataset_description": [
-            "This dataset shows the Canadian Armed Forces (CAF) rate for suicide per 100,000 for Regular Force males. As the number of events was less than 20 in most years, rates were not calculated annually as these would not have been statistically reliable. Regular Force female rates were not calculated because female suicides were uncommon. This dataset is taken from the yearly Report on Suicide Mortality in the Canadian Armed Forces released on the Canada.ca platform at the homepage link provided down below."
+            "This dataset shows the Canadian Armed Forces (CAF) rate for suicide per 100,000 for Regular Force males. As the number of events was less than 20 in most years, rates were not calculated annually as these would not have been statistically reliable. Regular Force female rates were not calculated because female suicides were uncommon. This dataset is taken from the yearly Report on Suicide Mortality in the Canadian Armed Forces released on the Canada.ca platform at the homepage link provided down below.",
+            ""
         ],
         "keywords": [
             "suicide",
@@ -986,7 +998,8 @@
     "16": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/1270405b-fa35-49a5-800e-a8ddac54a086",
         "dataset_description": [
-            "Canadian Armed Forces operate various modern military vehicles, including the latest in armoured, recovery, engineering and reconnaissance vehicles. This dataset contains a listing of all Canadian Armed Forces vehicle equipment."
+            "Canadian Armed Forces operate various modern military vehicles, including the latest in armoured, recovery, engineering and reconnaissance vehicles. This dataset contains a listing of all Canadian Armed Forces vehicle equipment.",
+            ""
         ],
         "keywords": [
             "vehicle",
@@ -1063,7 +1076,8 @@
     "18": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/9139319a-9cef-4584-ab4e-6b5f4393ed15",
         "dataset_description": [
-            "This dataset list the total number of military and civilian personnel from 2001-2022. The dataset is separated in the following categories: gender, regular forces, reserve forces, officer and non-commissioned member (NCM)."
+            "This dataset list the total number of military and civilian personnel from 2001-2022. The dataset is separated in the following categories: gender, regular forces, reserve forces, officer and non-commissioned member (NCM).",
+            ""
         ],
         "keywords": [
             "personnel",
@@ -1639,7 +1653,8 @@
     "30": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/88a628ca-14dd-4da7-99ef-fa326ac94ad1",
         "dataset_description": [
-            "Binder used by the Chief of the Defence Staff to support his appearance on Canada\u2019s security posture in relation to Russia in front of the House Standing Committee on Public Safety and National Security."
+            "Binder used by the Chief of the Defence Staff to support his appearance on Canada\u2019s security posture in relation to Russia in front of the House Standing Committee on Public Safety and National Security.",
+            ""
         ],
         "keywords": [
             "International Security; Domestic and Continental Defence; Defence Spending; Procurement"
@@ -1962,7 +1977,8 @@
     "38": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/bff41ae1-72ba-4290-96b4-2933f0e08c04",
         "dataset_description": [
-            "Canadian Forces Housing Agency (CFHA) is the managing authority for the Department of National Defence residential housing portfolio. This dataset contains the Department of National Defence's housing locations throughout Canada and the numbers of houses at each location since 2017."
+            "Canadian Forces Housing Agency (CFHA) is the managing authority for the Department of National Defence residential housing portfolio. This dataset contains the Department of National Defence's housing locations throughout Canada and the numbers of houses at each location since 2017.",
+            ""
         ],
         "keywords": [
             "Defence",
@@ -1993,7 +2009,8 @@
     "39": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/32646e69-4b80-46c5-8d35-4fdaff467bc5",
         "dataset_description": [
-            "This audit focused on whether key federal organizations built the maritime domain awareness needed to respond to safety and security risks and incidents associated with increasing vessel traffic in Arctic waters. The federal organizations deemed key to the surveillance of Arctic waters and included in the scope were Transport Canada, Fisheries and Oceans Canada, the Canadian Coast Guard, National Defence, and Environment and Climate Change Canada. We also included Public Services and Procurement Canada for its supporting role in central purchasing and contracting for items such as vessels."
+            "This audit focused on whether key federal organizations built the maritime domain awareness needed to respond to safety and security risks and incidents associated with increasing vessel traffic in Arctic waters. The federal organizations deemed key to the surveillance of Arctic waters and included in the scope were Transport Canada, Fisheries and Oceans Canada, the Canadian Coast Guard, National Defence, and Environment and Climate Change Canada. We also included Public Services and Procurement Canada for its supporting role in central purchasing and contracting for items such as vessels.",
+            ""
         ],
         "keywords": [
             "Audit",
@@ -2536,7 +2553,8 @@
     "51": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/ed1d207a-7fac-45c7-9cdc-e20ca58062e4",
         "dataset_description": [
-            "This dataset outlines the count and percentage of various marital status types for Non-Commissioned Members from Regular Forces from 1997-2022, provided by the Chief of Military Personnel (CMP) annual report. CMP is responsible for the overall personnel management of the Canadian Armed Forces (CAF). They oversee recruitment, training, education, pay, benefits, health services, honours, history, casualty support, career transition services and a host of other corporate and personnel support services."
+            "This dataset outlines the count and percentage of various marital status types for Non-Commissioned Members from Regular Forces from 1997-2022, provided by the Chief of Military Personnel (CMP) annual report. CMP is responsible for the overall personnel management of the Canadian Armed Forces (CAF). They oversee recruitment, training, education, pay, benefits, health services, honours, history, casualty support, career transition services and a host of other corporate and personnel support services.",
+            ""
         ],
         "keywords": [
             "Marital Status",
@@ -2579,7 +2597,8 @@
     "52": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/47ba84fb-3ef4-49c3-9d59-463923391c82",
         "dataset_description": [
-            "This dataset, provided by the Chief of Military Personnel (CMP) annual report, outlines the count and percentage of various marital status types for officers and officer cadets (OCdts) from 1997-2022. CMP is responsible for the overall personnel management of the Canadian Armed Forces (CAF). They oversee recruitment, training, education, pay, benefits, health services, honours, history, casualty support, career transition services and a host of other corporate and personnel support services"
+            "This dataset, provided by the Chief of Military Personnel (CMP) annual report, outlines the count and percentage of various marital status types for officers and officer cadets (OCdts) from 1997-2022. CMP is responsible for the overall personnel management of the Canadian Armed Forces (CAF). They oversee recruitment, training, education, pay, benefits, health services, honours, history, casualty support, career transition services and a host of other corporate and personnel support services",
+            ""
         ],
         "keywords": [
             "Marital Status",
@@ -2637,7 +2656,8 @@
     "53": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/f2c1682b-0216-4439-85af-fc968cf79fce",
         "dataset_description": [
-            "The Canadian Forces Housing Agency (CFHA) is the managing authority for the Department of National Defence residential housing portfolio. This dataset contains the bedroom count in residential housing units at Department of National Defence housing locations throughout Canada."
+            "The Canadian Forces Housing Agency (CFHA) is the managing authority for the Department of National Defence residential housing portfolio. This dataset contains the bedroom count in residential housing units at Department of National Defence housing locations throughout Canada.",
+            ""
         ],
         "keywords": [
             "Military Housing",
@@ -2682,7 +2702,8 @@
     "54": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/761e3ea6-7cc7-409c-9c9c-ca1d30c969b6",
         "dataset_description": [
-            "Canadian Armed Forces (CAF) Food Services provides cost efficient and effective food services that support military activities and that meet client expectations of quality, choice, value, nutrition, and service. The Canadian Armed Forces Food Services exist to provide food services to Department of National Defence funded customers. This dataset is a report on the national average meal rates representing the average cost per meal per day across Department of National Defence and the Canadian Armed Forces. This report is also used in the validation of national standards and in determining the effectiveness of Food Services policy."
+            "Canadian Armed Forces (CAF) Food Services provides cost efficient and effective food services that support military activities and that meet client expectations of quality, choice, value, nutrition, and service. The Canadian Armed Forces Food Services exist to provide food services to Department of National Defence funded customers. This dataset is a report on the national average meal rates representing the average cost per meal per day across Department of National Defence and the Canadian Armed Forces. This report is also used in the validation of national standards and in determining the effectiveness of Food Services policy.",
+            ""
         ],
         "keywords": [
             "meal rates",
@@ -2742,7 +2763,8 @@
     "55": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/efcf4eaa-db27-48df-b168-1b6628294074",
         "dataset_description": [
-            "Canadian Armed Forces (CAF) Food Services provides cost efficient and effective food services that support military activities and that meet client expectations of quality, choice, value, nutrition, and service. This dataset is a report that describes the fixed daily cost of meals from basic food cost and labour cost per base location. Fixed daily cost of meals is a cost that remains unchanged despite changes in the volume of the kitchen activity, including the costs of management staff, base support staff and depreciation of capital equipment. They are normally determined locally for each Base on August 1 for each year."
+            "Canadian Armed Forces (CAF) Food Services provides cost efficient and effective food services that support military activities and that meet client expectations of quality, choice, value, nutrition, and service. This dataset is a report that describes the fixed daily cost of meals from basic food cost and labour cost per base location. Fixed daily cost of meals is a cost that remains unchanged despite changes in the volume of the kitchen activity, including the costs of management staff, base support staff and depreciation of capital equipment. They are normally determined locally for each Base on August 1 for each year.",
+            ""
         ],
         "keywords": [
             "military",
@@ -2803,7 +2825,8 @@
     "56": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/7457ea2a-0249-43b6-9f1e-984608a77371",
         "dataset_description": [
-            "Canadian Armed Forces (CAF) Food Services provides cost efficient and effective food services that support military activities and that meet client expectations of quality, choice, value, nutrition, and service. The Canadian Armed Forces Food Services exist to provide food services to Department of National Defence funded customers. This dataset is the report of the yearly summary of the dollar values purchases for each Base per Supplier."
+            "Canadian Armed Forces (CAF) Food Services provides cost efficient and effective food services that support military activities and that meet client expectations of quality, choice, value, nutrition, and service. The Canadian Armed Forces Food Services exist to provide food services to Department of National Defence funded customers. This dataset is the report of the yearly summary of the dollar values purchases for each Base per Supplier.",
+            ""
         ],
         "keywords": [
             "kitchen supplies",
@@ -2862,7 +2885,8 @@
     "57": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/c392fd78-a931-4d60-841a-a1f1eb7224c0",
         "dataset_description": [
-            "Canadian Armed Forces (CAF) Food Services provides cost efficient and effective food services that support military activities and that meet client expectations of quality, choice, value, nutrition, and service. The Canadian Armed Forces Food Services exist to provide food services to Department of National Defence funded customers. This dataset is a report on operating statements that identifies the expenditures incurred, the revenues and recoveries generated by type of customer, and the local budget contribution to the provision of food services at the base/wing/unit level. The operating statements is used to compare the results obtained against historical data at various management levels. It can be used to help forecast the next year\u2019s recovery level by type of customer, based on the estimated future volume of activity. Finally, it helps determine the local budgetary resources, which are needed to meet the locally funded feeding requirements."
+            "Canadian Armed Forces (CAF) Food Services provides cost efficient and effective food services that support military activities and that meet client expectations of quality, choice, value, nutrition, and service. The Canadian Armed Forces Food Services exist to provide food services to Department of National Defence funded customers. This dataset is a report on operating statements that identifies the expenditures incurred, the revenues and recoveries generated by type of customer, and the local budget contribution to the provision of food services at the base/wing/unit level. The operating statements is used to compare the results obtained against historical data at various management levels. It can be used to help forecast the next year\u2019s recovery level by type of customer, based on the estimated future volume of activity. Finally, it helps determine the local budgetary resources, which are needed to meet the locally funded feeding requirements.",
+            ""
         ],
         "keywords": [
             "Kitchens",
@@ -2922,7 +2946,8 @@
     "58": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/a503f0de-b081-4b8f-ae69-651f8c95d676",
         "dataset_description": [
-            "Ranks within the Canadian Armed Forces (CAF) signify the persons position within its hierarchical structure. Like a major corporation, as an individual is given more responsibility and authority they are promoted within the organization. The formal rank structure within the CAF is essential for the passing of orders in operations, the maintenance of good order and discipline and ensures the clarity of command."
+            "Ranks within the Canadian Armed Forces (CAF) signify the persons position within its hierarchical structure. Like a major corporation, as an individual is given more responsibility and authority they are promoted within the organization. The formal rank structure within the CAF is essential for the passing of orders in operations, the maintenance of good order and discipline and ensures the clarity of command.",
+            ""
         ],
         "keywords": [
             "Defence",
@@ -2960,7 +2985,8 @@
     "59": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/f93272d3-d3a0-4497-9bde-a1c65afa4e0f",
         "dataset_description": [
-            "Binder used by the Minister of National Defence to support her appearance on the Main Estimates in front of the House Standing Committee on National Defence."
+            "Binder used by the Minister of National Defence to support her appearance on the Main Estimates in front of the House Standing Committee on National Defence.",
+            ""
         ],
         "keywords": [
             "Personnel",
@@ -3007,7 +3033,8 @@
     "60": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/fe1dfbb9-0fc3-42ca-b2a9-6ca4c05dbac9",
         "dataset_description": [
-            "The database contains patent documents from 1869 to February 28, 2022. It includes patent record information of newly granted patents and applications opened to public inspection. These records contain the same information as the XML data that are disseminated through IP Horizons (Canada.ca/IP-Data), with one exception: all street addresses of inventors have been suppressed."
+            "The database contains patent documents from 1869 to February 28, 2022. It includes patent record information of newly granted patents and applications opened to public inspection. These records contain the same information as the XML data that are disseminated through IP Horizons (Canada.ca/IP-Data), with one exception: all street addresses of inventors have been suppressed.",
+            ""
         ],
         "resources": [
             {
@@ -4761,7 +4788,8 @@
     "61": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/d92aacca-769f-4e8e-9d79-0bcf3078ff21",
         "dataset_description": [
-            "The database covers all industrial design applications registered in Canada from December 26, 1861 to September 1, 2022. These records contain the same information as the XML data that are disseminated through IP Horizons. Where as the XML files on IP Horizons are updated on a weekly basis, the CSV/TXT data published through the Open Government Portal are scheduled to be updated quarterly."
+            "The database covers all industrial design applications registered in Canada from December 26, 1861 to September 1, 2022. These records contain the same information as the XML data that are disseminated through IP Horizons. Where as the XML files on IP Horizons are updated on a weekly basis, the CSV/TXT data published through the Open Government Portal are scheduled to be updated quarterly.",
+            ""
         ],
         "resources": [
             {
@@ -4902,7 +4930,8 @@
     "62": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/111372ec-e285-422c-a923-fe6914a1b3fc",
         "dataset_description": [
-            "Binder used by the Minister of National Defence to support her appearance on the Situation in Afghanistan in front of the House Special Committee on Afghanistan."
+            "Binder used by the Minister of National Defence to support her appearance on the Situation in Afghanistan in front of the House Special Committee on Afghanistan.",
+            ""
         ],
         "keywords": [
             "Afghanistan",
@@ -4945,7 +4974,8 @@
     "63": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/18beb583-8dbe-434e-ba49-970658fcd6ef",
         "dataset_description": [
-            "This dataset records the military equipment used by the Canadian Armed Forces in training and operations to ensure our Forces are ready to take on future challenges. This equipment includes: aircraft, ships, vehicles and weapons used by the Canadian Armed Forces in training and operations."
+            "This dataset records the military equipment used by the Canadian Armed Forces in training and operations to ensure our Forces are ready to take on future challenges. This equipment includes: aircraft, ships, vehicles and weapons used by the Canadian Armed Forces in training and operations.",
+            ""
         ],
         "keywords": [
             "Defence",
@@ -5096,7 +5126,8 @@
     "67": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/9fbed581-4dd3-42c9-8244-59ee0b50bde8",
         "dataset_description": [
-            "The Departmental Results Framework (DRF) is the strategic view of Defence\u2019s mandate, displaying its Core Responsibilities and key performance information. It represents the corporate framework used to demonstrate plans, achievements, expenditures and performance results. This helps Canadians and parliamentarians understand what we do, what we seek to achieve, and how we will determine if we have achieved it. This dataset contains a list of the key performance indicators used at National Defence for the fiscal years of 2020-2021 and 2021-2022. It also indicates which indicators are published as datasets and can currently be found on the Open Government portal as well."
+            "The Departmental Results Framework (DRF) is the strategic view of Defence\u2019s mandate, displaying its Core Responsibilities and key performance information. It represents the corporate framework used to demonstrate plans, achievements, expenditures and performance results. This helps Canadians and parliamentarians understand what we do, what we seek to achieve, and how we will determine if we have achieved it. This dataset contains a list of the key performance indicators used at National Defence for the fiscal years of 2020-2021 and 2021-2022. It also indicates which indicators are published as datasets and can currently be found on the Open Government portal as well.",
+            ""
         ],
         "keywords": [
             "Department of National Defence",
@@ -5145,7 +5176,8 @@
     "68": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/1b2313e1-6d1b-4a04-aa11-1700661ebdea",
         "dataset_description": [
-            "Canadian Joint Operations Command (CJOC) leads most Canadian Armed Forces (CAF) operations in Canada, North America, and around the world. It directs CAF missions from planning to closing, to meet national and international strategic goals. This data set is an as needed pull from GUARDIAN which provides a breakdown of the percentages of positions filled across Canadian Joint Operations Command level two organizations."
+            "Canadian Joint Operations Command (CJOC) leads most Canadian Armed Forces (CAF) operations in Canada, North America, and around the world. It directs CAF missions from planning to closing, to meet national and international strategic goals. This data set is an as needed pull from GUARDIAN which provides a breakdown of the percentages of positions filled across Canadian Joint Operations Command level two organizations.",
+            ""
         ],
         "keywords": [
             "Human resources",
@@ -5201,7 +5233,8 @@
     "69": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/47a1331f-c1f3-4b39-9368-e6a15b6b8725",
         "dataset_description": [
-            "Binder used by the Minister of National Defence to support her appearance on her mandate and priorities in front of the Standing Senate Committee on National Security and Defence."
+            "Binder used by the Minister of National Defence to support her appearance on her mandate and priorities in front of the Standing Senate Committee on National Security and Defence.",
+            ""
         ],
         "keywords": [
             "Personnel",
@@ -5247,7 +5280,8 @@
     "70": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/973e94e8-5e09-495a-8157-ce308c9fd335",
         "dataset_description": [
-            "House Committee on National Defence: Minister of National Defence Mandate Letter and Priorities (Appearance by the Minister of National Defence), 09 February, 2022"
+            "House Committee on National Defence: Minister of National Defence Mandate Letter and Priorities (Appearance by the Minister of National Defence), 09 February, 2022",
+            ""
         ],
         "keywords": [
             "National Defence Mandate Letter and Priorities"
@@ -5286,7 +5320,8 @@
     "71": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/deeaddd4-fa52-4fd7-9668-d66940280493",
         "dataset_description": [
-            "List of all titles published on the Internet for streaming by NFB. Some titles are published on the Internet but can't be viewed because of rights restrictions."
+            "List of all titles published on the Internet for streaming by NFB. Some titles are published on the Internet but can't be viewed because of rights restrictions.",
+            ""
         ],
         "keywords": [
             "nfb",
@@ -5385,7 +5420,8 @@
     "72": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/70386a0b-21f5-4336-9362-ef1d940d94c7",
         "dataset_description": [
-            "Cadet Program is a relevant, credible and proactive youth development organization, offering the program of choice for Canada\u2019s youth, preparing them to become the leaders of tomorrow through a set of fun, challenging, well-organized and safe activities. This dataset identifies all the local activities that were held by the Corps and Squadrons of the Canadian Cadet Organizations. Attendance statistics for each activity are also included."
+            "Cadet Program is a relevant, credible and proactive youth development organization, offering the program of choice for Canada\u2019s youth, preparing them to become the leaders of tomorrow through a set of fun, challenging, well-organized and safe activities. This dataset identifies all the local activities that were held by the Corps and Squadrons of the Canadian Cadet Organizations. Attendance statistics for each activity are also included.",
+            ""
         ],
         "keywords": [
             "cadets",
@@ -5424,7 +5460,8 @@
     "73": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/b373c407-e1a3-465b-8398-8940b4004552",
         "dataset_description": [
-            "The Cadet Program is a relevant, credible and proactive youth development organization, offering the program of choice for Canada\u2019s youth, preparing them to become the leaders of tomorrow through a set of fun, challenging, well-organized and safe activities. This dataset contains a partial list of the qualifications and awards that were allocated to cadets as part of the Canadian Cadet Organizations. The data includes the date and authority for each award and qualification."
+            "The Cadet Program is a relevant, credible and proactive youth development organization, offering the program of choice for Canada\u2019s youth, preparing them to become the leaders of tomorrow through a set of fun, challenging, well-organized and safe activities. This dataset contains a partial list of the qualifications and awards that were allocated to cadets as part of the Canadian Cadet Organizations. The data includes the date and authority for each award and qualification.",
+            ""
         ],
         "keywords": [
             "cadets",
@@ -5786,7 +5823,8 @@
     "76": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/f763577c-b501-460c-935d-85135f41a30c",
         "dataset_description": [
-            "The Program Inventory (PI) is the set of Programs to which all Defence resources are aligned. It represents the corporate framework used to demonstrate plans, achievements, expenditures and performance results. This helps Canadians and parliamentarians understand what we do, what we seek to achieve, and how we will determine if we have achieved it. This dataset contains a list of the sets of programs used at National Defence for the fiscal years of 2020-2021 and 2021-2022."
+            "The Program Inventory (PI) is the set of Programs to which all Defence resources are aligned. It represents the corporate framework used to demonstrate plans, achievements, expenditures and performance results. This helps Canadians and parliamentarians understand what we do, what we seek to achieve, and how we will determine if we have achieved it. This dataset contains a list of the sets of programs used at National Defence for the fiscal years of 2020-2021 and 2021-2022.",
+            ""
         ],
         "keywords": [
             "Department of National Defence",
@@ -5835,7 +5873,8 @@
     "77": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/976bb4f8-2b63-4150-910c-1f8e094cc83a",
         "dataset_description": [
-            "This dataset contains the Manual of Abbreviations for National Defence (DND) and the Canadian Armed Forces (CAF), issued on authority of the Chief of Defence Staff. The aim of the Manual of Abbreviations is to give a list of all abbreviations used in DND/CAF. The dataset is a bilingual list of abbreviations in alphabetical order."
+            "This dataset contains the Manual of Abbreviations for National Defence (DND) and the Canadian Armed Forces (CAF), issued on authority of the Chief of Defence Staff. The aim of the Manual of Abbreviations is to give a list of all abbreviations used in DND/CAF. The dataset is a bilingual list of abbreviations in alphabetical order.",
+            ""
         ],
         "keywords": [
             "National Defence",
@@ -5893,7 +5932,8 @@
     "78": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/cc6a1fb6-56ba-496b-a1b3-e909cc6242a6",
         "dataset_description": [
-            "This dataset describes the various documents created within DND/CAF, which have been implemented as part of the Information Management Program within GCDOCS, SharePoint, document tagging tool and used in other programs such as digitization of the paper records."
+            "This dataset describes the various documents created within DND/CAF, which have been implemented as part of the Information Management Program within GCDOCS, SharePoint, document tagging tool and used in other programs such as digitization of the paper records.",
+            ""
         ],
         "keywords": [
             "Defence",
@@ -5920,7 +5960,8 @@
     "79": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/1812c4ba-b74a-48c3-8be0-9fccbd0689cb",
         "dataset_description": [
-            "Having a robust Program Alignment Architecture (PAA) is a fundamental part of the Canadian Government\u2019s policy on Management, Resources, and Results Structures (MRRS). This policy reinforces the government\u2019s commitment to continually strengthen its management and accountability of public expenditures by providing a robust framework by which to link the use of resources to the achievement of results. The PAA for the Department of National Defence came into effect in April 2014. The PAA has since been replaced by the Department Results Framework(DRF) dataset (Ref: OD-2021-00004). The link to the new dataset can be found in the \"homepage\" section of this dataset."
+            "Having a robust Program Alignment Architecture (PAA) is a fundamental part of the Canadian Government\u2019s policy on Management, Resources, and Results Structures (MRRS). This policy reinforces the government\u2019s commitment to continually strengthen its management and accountability of public expenditures by providing a robust framework by which to link the use of resources to the achievement of results. The PAA for the Department of National Defence came into effect in April 2014. The PAA has since been replaced by the Department Results Framework(DRF) dataset (Ref: OD-2021-00004). The link to the new dataset can be found in the \"homepage\" section of this dataset.",
+            ""
         ],
         "keywords": [
             "Defence",
@@ -5957,7 +5998,8 @@
     "80": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/f479eee8-4126-44b6-9a1f-8db4c6be2bc1",
         "dataset_description": [
-            "The Cadet Program is a relevant, credible and proactive youth development organization, offering the program of choice for Canada\u2019s youth, preparing them to become the leaders of tomorrow through a set of fun, challenging, well-organized and safe activities. This dataset contains a list of participation applications submitted by cadets as part of the Canadian Cadet Organizations. These applications are for regional and national activities held outside of the local cadet corps or squadron. The dataset includes selection status, attendance status and the course or activity result."
+            "The Cadet Program is a relevant, credible and proactive youth development organization, offering the program of choice for Canada\u2019s youth, preparing them to become the leaders of tomorrow through a set of fun, challenging, well-organized and safe activities. This dataset contains a list of participation applications submitted by cadets as part of the Canadian Cadet Organizations. These applications are for regional and national activities held outside of the local cadet corps or squadron. The dataset includes selection status, attendance status and the course or activity result.",
+            ""
         ],
         "keywords": [
             "cadets",
@@ -5996,7 +6038,8 @@
     "81": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/402358f9-2808-44f7-99b3-58f6f5f95b1f",
         "dataset_description": [
-            "The Canadian Armed Forces Military Police (MP) maintains an activity tracking database known as the Security and Military Police Information System (SAMPIS). This is a collection of data representing the number of investigations commenced during a calendar year. This data in no way reflects criminal convictions; rather, it reflects the number of investigations that were initiated by the MP"
+            "The Canadian Armed Forces Military Police (MP) maintains an activity tracking database known as the Security and Military Police Information System (SAMPIS). This is a collection of data representing the number of investigations commenced during a calendar year. This data in no way reflects criminal convictions; rather, it reflects the number of investigations that were initiated by the MP",
+            ""
         ],
         "keywords": [
             "investigation",
@@ -6031,7 +6074,8 @@
     "82": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/91e225da-6d24-45b5-94b2-a775b9e19e95",
         "dataset_description": [
-            "Citation information for scientific and technical articles published between 2012-2019 authored or co-authored by Defence Research and Development Canada (DRDC) scientists. Please note that this data set contains metadata for DRDC publications that were primarily published in one language only by third party publishers."
+            "Citation information for scientific and technical articles published between 2012-2019 authored or co-authored by Defence Research and Development Canada (DRDC) scientists. Please note that this data set contains metadata for DRDC publications that were primarily published in one language only by third party publishers.",
+            ""
         ],
         "keywords": [
             "Defence Research",
@@ -6058,7 +6102,8 @@
     "83": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/63cd43c6-3ac5-4b4b-ba89-718280cc5258",
         "dataset_description": [
-            "Cadet Program is a relevant, credible and proactive youth development organization, offering the program of choice for Canada\u2019s youth, preparing them to become the leaders of tomorrow through a set of fun, challenging, well-organized and safe activities. This dataset contains a list of cadets enrolled in the Canadian Cadet Organizations. It outlines the duration the cadets were active, where they joined and how far they progressed in the training program."
+            "Cadet Program is a relevant, credible and proactive youth development organization, offering the program of choice for Canada\u2019s youth, preparing them to become the leaders of tomorrow through a set of fun, challenging, well-organized and safe activities. This dataset contains a list of cadets enrolled in the Canadian Cadet Organizations. It outlines the duration the cadets were active, where they joined and how far they progressed in the training program.",
+            ""
         ],
         "keywords": [
             "cadets",
@@ -6097,7 +6142,8 @@
     "84": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/eb506469-6b2a-49a1-bf4f-b79ce950691e",
         "dataset_description": [
-            "The Policy on Management, Resources and Results Structures requires the development of a departmental Performance Measurement Framework (PMF), which sets out the expected results and the performance measures to be reported for programs identified in the Program Alignment Architecture. The PMF is intended to communicate the overarching framework through which a department will collect and track performance information about the intended results of the department and its programs. The indicators in the departmental PMF are limited in number and focus on supporting departmental monitoring and reporting."
+            "The Policy on Management, Resources and Results Structures requires the development of a departmental Performance Measurement Framework (PMF), which sets out the expected results and the performance measures to be reported for programs identified in the Program Alignment Architecture. The PMF is intended to communicate the overarching framework through which a department will collect and track performance information about the intended results of the department and its programs. The indicators in the departmental PMF are limited in number and focus on supporting departmental monitoring and reporting.",
+            ""
         ],
         "keywords": [
             "Performance Management Framework",
@@ -6444,7 +6490,8 @@
     "87": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/2c30e366-ef2b-400e-8363-0b13e4a7b6f4",
         "dataset_description": [
-            "The National Research Council of Canada (NRC) and Defence Research and Development Canada (DRDC) have jointly been supporting shipboard helicopter operations in Canada for many years. Both groups are active in various international collaborations, including many through the North Atlantic Treaty Organization (NATO). To facilitate international collaborations, DRDC conceptualized a general warship geometry, known as the Notional Destroyer (ND), which they have used in studies relating to ship motion. NRC, in partnership with the NATO Applied Vehicle Technologies (AVT) Working Group AVT-315, has adapted the ND for studies relating to the launch and recovery of maritime helicopters. This variant of the ND is known as the NATO Generic Destroyer (NATO-GD). This posting provides geometrical, ship motion, and ship airwake data, generated in Canada in support of the AVT-315 working group, and to encourage other related research internationally. The activities of the AVT-315 working group, along with an introduction to the NATO-GD, are given by Owen et al. (2020)."
+            "The National Research Council of Canada (NRC) and Defence Research and Development Canada (DRDC) have jointly been supporting shipboard helicopter operations in Canada for many years. Both groups are active in various international collaborations, including many through the North Atlantic Treaty Organization (NATO). To facilitate international collaborations, DRDC conceptualized a general warship geometry, known as the Notional Destroyer (ND), which they have used in studies relating to ship motion. NRC, in partnership with the NATO Applied Vehicle Technologies (AVT) Working Group AVT-315, has adapted the ND for studies relating to the launch and recovery of maritime helicopters. This variant of the ND is known as the NATO Generic Destroyer (NATO-GD). This posting provides geometrical, ship motion, and ship airwake data, generated in Canada in support of the AVT-315 working group, and to encourage other related research internationally. The activities of the AVT-315 working group, along with an introduction to the NATO-GD, are given by Owen et al. (2020).",
+            ""
         ],
         "resources": [
             {
@@ -6680,7 +6727,8 @@
     "88": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/fbad397a-c6a8-4afc-ab98-769ac862487f",
         "dataset_description": [
-            "Canadian Forces Housing Agency (CFHA) is the managing authority for the Department of National Defence residential housing portfolio. This dataset provided by CFHA contains the total light-duty vehicle fleet count by vehicle type (internal combustion engine or zero emissions)"
+            "Canadian Forces Housing Agency (CFHA) is the managing authority for the Department of National Defence residential housing portfolio. This dataset provided by CFHA contains the total light-duty vehicle fleet count by vehicle type (internal combustion engine or zero emissions)",
+            ""
         ],
         "keywords": [
             "Zero emissions vehicle",
@@ -6902,7 +6950,8 @@
     "92": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/afa9c0a7-7cf5-4a7a-b034-cf1eb4705d9d",
         "dataset_description": [
-            "A sanitized data set on how the Royal Canadian Navy tracks high priority requisitions. The movement of parts between multiple private (ie DRMIS, CGCS) and public (ie Purolator) information systems necessitates the creation of a tracking spreadsheet manually maintained by dedicated naval supply technicians. This dataset will no longer be updated as the data is no longer collected."
+            "A sanitized data set on how the Royal Canadian Navy tracks high priority requisitions. The movement of parts between multiple private (ie DRMIS, CGCS) and public (ie Purolator) information systems necessitates the creation of a tracking spreadsheet manually maintained by dedicated naval supply technicians. This dataset will no longer be updated as the data is no longer collected.",
+            ""
         ],
         "keywords": [
             "Supplies",
@@ -6968,7 +7017,8 @@
     "93": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/dfdb58f8-737e-4fc9-8d37-d454c1869684",
         "dataset_description": [
-            "Department of National Defence and Canadian Armed Forces corporate administrative direction is set out in the comprehensive collection of Defence Administrative Orders and Directives (DAOD) that are issued by or under the authority of the Deputy Minister and the Chief of the Defence Staff."
+            "Department of National Defence and Canadian Armed Forces corporate administrative direction is set out in the comprehensive collection of Defence Administrative Orders and Directives (DAOD) that are issued by or under the authority of the Deputy Minister and the Chief of the Defence Staff.",
+            ""
         ],
         "keywords": [
             "Defence",
@@ -7006,7 +7056,8 @@
     "94": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/341141a0-132b-42f7-97e9-d14fc85fbf60",
         "dataset_description": [
-            "This dataset contains chiller sensor data from the Integrated Platform Management System used by the Chief of the Naval Staff (C Navy). This data was collected from sensor code readings on Her Majesty's Canadian Ship (HMCS) ST. JOHN'S from 2015-2017.The data is no longer being collected."
+            "This dataset contains chiller sensor data from the Integrated Platform Management System used by the Chief of the Naval Staff (C Navy). This data was collected from sensor code readings on Her Majesty's Canadian Ship (HMCS) ST. JOHN'S from 2015-2017.The data is no longer being collected.",
+            ""
         ],
         "keywords": [
             "Navy",
@@ -7169,7 +7220,8 @@
     "97": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/792bb73a-f758-4459-b7e9-0c286a0bc15d",
         "dataset_description": [
-            "Today's Honour Roll recognizes the men and women of the military who fell on this day in history. This data is derived from the Canadian Virtual War Memorial (CVWM) \u2013 a registry of the more than 118,000 Canadians and Newfoundlanders who have given their lives serving Canada or the United Kingdom \u2013 established to allow all Canadians the opportunity to honour and remember their sacrifices."
+            "Today's Honour Roll recognizes the men and women of the military who fell on this day in history. This data is derived from the Canadian Virtual War Memorial (CVWM) \u2013 a registry of the more than 118,000 Canadians and Newfoundlanders who have given their lives serving Canada or the United Kingdom \u2013 established to allow all Canadians the opportunity to honour and remember their sacrifices.",
+            ""
         ],
         "keywords": [
             "Military",
@@ -7232,7 +7284,8 @@
     "98": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/721ded30-57f7-411a-9b33-af4a50f4a779",
         "dataset_description": [
-            "Information material prepared in fall 2021 for the new Minister of National Defence."
+            "Information material prepared in fall 2021 for the new Minister of National Defence.",
+            ""
         ],
         "keywords": [
             "elections",
@@ -7315,7 +7368,8 @@
     "100": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/84de1c7e-1247-433a-86d2-e1a6e7dac2f8",
         "dataset_description": [
-            "This audit focused on whether National Defence supplied the Canadian Armed Forces with the materiel they needed, when needed. We examined whether National Defence delivered the requested materiel items in a timely manner while avoiding needless transportation costs. We examined the supply chain for selected materiel from the time of request to the delivery of the materiel. Selected materiel included tools, spare parts, uniforms and specialized clothing, and rations. We excluded ammunition, bombs, and missiles, and also stand-alone equipment such as aircraft, vessels, and vehicles."
+            "This audit focused on whether National Defence supplied the Canadian Armed Forces with the materiel they needed, when needed. We examined whether National Defence delivered the requested materiel items in a timely manner while avoiding needless transportation costs. We examined the supply chain for selected materiel from the time of request to the delivery of the materiel. Selected materiel included tools, spare parts, uniforms and specialized clothing, and rations. We excluded ammunition, bombs, and missiles, and also stand-alone equipment such as aircraft, vessels, and vehicles.",
+            ""
         ],
         "keywords": [
             "Audit",
@@ -7383,7 +7437,8 @@
     "101": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/586e2497-fc88-4c91-9c2b-c7d56fc7b533",
         "dataset_description": [
-            "Transition materials provided to the National Defence Associate Deputy Minister upon appointment on April 1, 2021"
+            "Transition materials provided to the National Defence Associate Deputy Minister upon appointment on April 1, 2021",
+            ""
         ],
         "keywords": [
             "Defence Budget",
@@ -7429,7 +7484,8 @@
     "102": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/57697755-cf66-48ab-ad53-1d02c5383552",
         "dataset_description": [
-            "House of Commons Standing Committee on Public Accounts, May 25, 2021 Briefing for the Deputy Minister of Fisheries and Oceans"
+            "House of Commons Standing Committee on Public Accounts, May 25, 2021 Briefing for the Deputy Minister of Fisheries and Oceans",
+            ""
         ],
         "keywords": [
             "Shipbuilding",
@@ -7466,7 +7522,8 @@
     "103": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/e7a17279-d74e-4c60-80cb-8fdfa2274c6a",
         "dataset_description": [
-            "Binder prepared for the Minister of National Defence ahead of his appearance before the House Committee on National Defence (NDDN) as part of their study on addressing sexual misconduct in the Canadian Armed Forces. Keywords: NDDN, Department of National Defence, Canadian Armed Forces, Sexual misconduct, inappropriate behaviour"
+            "Binder prepared for the Minister of National Defence ahead of his appearance before the House Committee on National Defence (NDDN) as part of their study on addressing sexual misconduct in the Canadian Armed Forces. Keywords: NDDN, Department of National Defence, Canadian Armed Forces, Sexual misconduct, inappropriate behaviour",
+            ""
         ],
         "keywords": [
             "nddn",
@@ -7510,7 +7567,8 @@
     "104": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/bc83f18e-a1e5-4b21-a4bb-a870a1c2fc60",
         "dataset_description": [
-            "Data collected between 1989 and 2007. Riometers passively monitor radio noise from extrasolar sources and have been shown to be an effective way to monitor high-energy electron populations in the region of space around the Earth. Data is in text (.txt) format. .tar.gz files are compressed archives. They can be opened with tools available in open format."
+            "Data collected between 1989 and 2007. Riometers passively monitor radio noise from extrasolar sources and have been shown to be an effective way to monitor high-energy electron populations in the region of space around the Earth. Data is in text (.txt) format. .tar.gz files are compressed archives. They can be opened with tools available in open format.",
+            ""
         ],
         "keywords": [
             "Space",
@@ -7555,7 +7613,8 @@
     "105": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/60841bff-eef2-409f-a648-c5abd01925d3",
         "dataset_description": [
-            "This audit focused on whether the large vessel fleets of the Royal Canadian Navy and the Canadian Coast Guard were being renewed in a timely manner. We examined whether shipbuilding was on schedule and whether the new ships were being delivered in time for the retirement of the old ships. We also looked at how the audited organizations managed the risks of delays, including how they mitigated the potential impact of delays on the navy\u2019s and coast guard\u2019s operations while waiting for new ships."
+            "This audit focused on whether the large vessel fleets of the Royal Canadian Navy and the Canadian Coast Guard were being renewed in a timely manner. We examined whether shipbuilding was on schedule and whether the new ships were being delivered in time for the retirement of the old ships. We also looked at how the audited organizations managed the risks of delays, including how they mitigated the potential impact of delays on the navy\u2019s and coast guard\u2019s operations while waiting for new ships.",
+            ""
         ],
         "keywords": [
             "Audit",
@@ -7626,7 +7685,8 @@
     "106": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/8bed8c7b-0e9a-435c-bc63-a3214f4f8016",
         "dataset_description": [
-            "Deputy Minister of National Defence's appearance before the Public Accounts Committee on the findings of the Auditor General\u2019s report: Supplying the Canadian Armed Forces."
+            "Deputy Minister of National Defence's appearance before the Public Accounts Committee on the findings of the Auditor General\u2019s report: Supplying the Canadian Armed Forces.",
+            ""
         ],
         "keywords": [
             "supply",
@@ -7669,7 +7729,8 @@
     "107": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/b9e27728-21dc-4213-bc36-96b676933c02",
         "dataset_description": [
-            "Main Estimates binder for the Minister of National Defence"
+            "Main Estimates binder for the Minister of National Defence",
+            ""
         ],
         "keywords": [
             "Main Estimates",
@@ -7713,7 +7774,8 @@
     "108": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/d0f295b3-09d9-420b-9f32-b6fb3c245bdc",
         "dataset_description": [
-            "Part I of the Estimates process is the Government Expenditure Plan. It provides a summary and highlights of year-over-year changes in departmental spending and transfer payments in order to provide perspective on the major issues influencing government planned spending. Part II is the Main Estimates, known traditionally as the \u201cBlue Book.\u201d It directly supports the appropriation acts for the Main Estimates. The publication provides a listing of the resources required by individual departments and agencies for the upcoming fiscal year in order to deliver the programs for which they are responsible. It identifies the spending authorities (votes) and the amounts to be included in subsequent appropriation bills that Parliament will be asked to approve to enable the government to proceed with its spending plans"
+            "Part I of the Estimates process is the Government Expenditure Plan. It provides a summary and highlights of year-over-year changes in departmental spending and transfer payments in order to provide perspective on the major issues influencing government planned spending. Part II is the Main Estimates, known traditionally as the \u201cBlue Book.\u201d It directly supports the appropriation acts for the Main Estimates. The publication provides a listing of the resources required by individual departments and agencies for the upcoming fiscal year in order to deliver the programs for which they are responsible. It identifies the spending authorities (votes) and the amounts to be included in subsequent appropriation bills that Parliament will be asked to approve to enable the government to proceed with its spending plans",
+            ""
         ],
         "resources": [
             {
@@ -7831,7 +7893,8 @@
     "109": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/986b48fd-dd7f-40b3-a5d3-5781f141b373",
         "dataset_description": [
-            "Supplementary Estimates are part of the normal parliamentary approval process to ensure that previously planned government initiatives receive the necessary funding to move them forward, therefore meeting the needs of Canadians. They present information to Parliament on the Government of Canada\u2019s spending requirements that were not sufficiently developed in time for inclusion in the Main Estimates, and will from time to time include urgent but unforeseen expenditures, such as natural disasters (an ice storm, H1N1, etc.). Supplementary Estimates directly support an appropriation act. Supplementary Estimates are published throughout the year; each release is identified alphabetically (A, B, C, etc.). Supplementary Estimates (A) are tabled in May and the associated appropriation act is granted royal assent and becomes law in June. These provide federal organizations with the funding they need early in the year. Supplementary Estimates (B) are tabled in late October or early November and the associated appropriation act is granted royal assent in December. Supplementary Estimates (C) are tabled in February and the associated appropriation act is granted royal assent in March."
+            "Supplementary Estimates are part of the normal parliamentary approval process to ensure that previously planned government initiatives receive the necessary funding to move them forward, therefore meeting the needs of Canadians. They present information to Parliament on the Government of Canada\u2019s spending requirements that were not sufficiently developed in time for inclusion in the Main Estimates, and will from time to time include urgent but unforeseen expenditures, such as natural disasters (an ice storm, H1N1, etc.). Supplementary Estimates directly support an appropriation act. Supplementary Estimates are published throughout the year; each release is identified alphabetically (A, B, C, etc.). Supplementary Estimates (A) are tabled in May and the associated appropriation act is granted royal assent and becomes law in June. These provide federal organizations with the funding they need early in the year. Supplementary Estimates (B) are tabled in late October or early November and the associated appropriation act is granted royal assent in December. Supplementary Estimates (C) are tabled in February and the associated appropriation act is granted royal assent in March.",
+            ""
         ],
         "temporal_coverage": "2020-04-01 to 2021-03-31",
         "resources": [
@@ -7972,7 +8035,8 @@
     "110": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/ccc75c12-5acc-4a6a-959f-ef6f621147b9",
         "dataset_description": [
-            "This interactive map commemorates Canada\u2019s participation in armed conflicts at home and abroad by highlighting a sample of the many geographical features and places named for those that served our country. These commemorative geographical names help us remember war casualties, soldiers, sailors, airmen and airwomen, military leaders, and civilians recognized or decorated for outstanding acts of bravery and sacrifice in battle. These names also commemorate notable battles in which Canada participated, and Canadian military units, regiments, squadrons, and ships in which Canadians served. Federal, provincial and territorial members of the Geographical Names Board of Canada provided these commemorative names for the development of the map. Many more commemorative place names exist in Canada, and will be added in future releases of this evergreen interactive map. If you would like to contribute names to this project, please contact the Geographical Names Board of Canada Secretariat at Natural Resources Canada."
+            "This interactive map commemorates Canada\u2019s participation in armed conflicts at home and abroad by highlighting a sample of the many geographical features and places named for those that served our country. These commemorative geographical names help us remember war casualties, soldiers, sailors, airmen and airwomen, military leaders, and civilians recognized or decorated for outstanding acts of bravery and sacrifice in battle. These names also commemorate notable battles in which Canada participated, and Canadian military units, regiments, squadrons, and ships in which Canadians served. Federal, provincial and territorial members of the Geographical Names Board of Canada provided these commemorative names for the development of the map. Many more commemorative place names exist in Canada, and will be added in future releases of this evergreen interactive map. If you would like to contribute names to this project, please contact the Geographical Names Board of Canada Secretariat at Natural Resources Canada.",
+            ""
         ],
         "keywords": [
             "Canada",
@@ -8097,7 +8161,8 @@
     "111": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/767bb57b-1c6f-416c-9fa0-c8ff62f44476",
         "dataset_description": [
-            "Briefing binder created for the Minister of National Defence on the occasion of his appearance before the Special Committee on the COVID-19 Pandemic on July 22, 2020. CAF Assistance in LCTF, CAF Support to the Whole of Government, Victoria Class Submarines, MEDINT, PPE, Hateful conduct in the CAF"
+            "Briefing binder created for the Minister of National Defence on the occasion of his appearance before the Special Committee on the COVID-19 Pandemic on July 22, 2020. CAF Assistance in LCTF, CAF Support to the Whole of Government, Victoria Class Submarines, MEDINT, PPE, Hateful conduct in the CAF",
+            ""
         ],
         "keywords": [
             "CAF Assistance in LCTF",
@@ -8184,7 +8249,8 @@
     "113": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/7589c9f2-25cf-48b6-97e9-ac63b1010ef1",
         "dataset_description": [
-            "Briefing binder created for the Minister of National Defence on the occasion of his appearance before the Special Committee on the COVID-19 Pandemic on June 10, 2020"
+            "Briefing binder created for the Minister of National Defence on the occasion of his appearance before the Special Committee on the COVID-19 Pandemic on June 10, 2020",
+            ""
         ],
         "keywords": [
             "CAF Assistance in LCTF",
@@ -8225,7 +8291,8 @@
     "114": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/86a90d9d-e212-4ead-b628-01fe9d34660d",
         "dataset_description": [
-            "Briefing binder created for the Minister of National Defence on the occasion of his appearance before the Special Committee on the COVID-19 Pandemic on June 4, 2020 for CAF Assistance in LCTF, Parliamentary Budget Officer, Snowbird Aircraft Accident, Order Paper Questions"
+            "Briefing binder created for the Minister of National Defence on the occasion of his appearance before the Special Committee on the COVID-19 Pandemic on June 4, 2020 for CAF Assistance in LCTF, Parliamentary Budget Officer, Snowbird Aircraft Accident, Order Paper Questions",
+            ""
         ],
         "keywords": [
             "CAF Assistance in LCTF",
@@ -8267,7 +8334,8 @@
     "115": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/0544d25d-1b64-404d-922e-3a720762ab90",
         "dataset_description": [
-            "This report, which is tabled under section 20 of the Service Fees Act and section 4.2.8 of the Directive on Charging and Special Financial Authorities , contains information about the fees that LAC had the authority to charge in the 2018 to 2019 fiscal year."
+            "This report, which is tabled under section 20 of the Service Fees Act and section 4.2.8 of the Directive on Charging and Special Financial Authorities , contains information about the fees that LAC had the authority to charge in the 2018 to 2019 fiscal year.",
+            ""
         ],
         "keywords": [
             "Fees Report",
@@ -8324,7 +8392,8 @@
     "116": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/10df5ee9-9696-4bef-bc15-def1cfc20bfa",
         "dataset_description": [
-            "Briefing binder created for the Minister of National Defence on the occasion of his appearance before the Special Committee on the COVID-19 Pandemic on May 27, 2020"
+            "Briefing binder created for the Minister of National Defence on the occasion of his appearance before the Special Committee on the COVID-19 Pandemic on May 27, 2020",
+            ""
         ],
         "keywords": [
             "Special Committee on the COVID-19 Pandemic",
@@ -8366,7 +8435,8 @@
     "117": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/a6191a06-c938-4983-8d16-2e02f1a1827a",
         "dataset_description": [
-            "Briefing binder created for the Minister of National Defence on the occasion of his appearance before the Special Committee on the COVID-19 Pandemic on May 5. Includes Canadian Armed Forces Support to the Whole-of-Government, Response to COVID-19, Canadian Armed Forces assistance to Long Term Care Facilities, HMCS Fredericton Helicopter Accident, Parliamentary Budget Officer costing of Class C employment for Op Laser, Countering Misinformation on COVID-19"
+            "Briefing binder created for the Minister of National Defence on the occasion of his appearance before the Special Committee on the COVID-19 Pandemic on May 5. Includes Canadian Armed Forces Support to the Whole-of-Government, Response to COVID-19, Canadian Armed Forces assistance to Long Term Care Facilities, HMCS Fredericton Helicopter Accident, Parliamentary Budget Officer costing of Class C employment for Op Laser, Countering Misinformation on COVID-19",
+            ""
         ],
         "keywords": [
             "Canadian Armed Forces Support to the Whole-of-Government Response to COVID-19",
@@ -8409,7 +8479,8 @@
     "118": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/214d8624-6044-462f-8874-c0b796835a28",
         "dataset_description": [
-            "Briefing binder created for the Minister of National Defence on the occasion of his appearance before the Standing Committee on National Defence convened on March 11, 2020 for the purpose of examining the Supplementary Estimates (B) submission of the Department of National Defence and the Canadian Armed Forces."
+            "Briefing binder created for the Minister of National Defence on the occasion of his appearance before the Standing Committee on National Defence convened on March 11, 2020 for the purpose of examining the Supplementary Estimates (B) submission of the Department of National Defence and the Canadian Armed Forces.",
+            ""
         ],
         "keywords": [
             "Standing Committee on National Defence",
@@ -8452,7 +8523,8 @@
     "119": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/dbeb357c-87d3-4da6-8cef-439551927440",
         "dataset_description": [
-            "National Defence transition materials provided to the Minister of National Defence upon re-appointment on November 20, 2019"
+            "National Defence transition materials provided to the Minister of National Defence upon re-appointment on November 20, 2019",
+            ""
         ],
         "keywords": [
             "National Defence",
@@ -8498,7 +8570,8 @@
     "120": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/7f59c976-3bd5-48f4-93b6-6f1853be8e16",
         "dataset_description": [
-            "National Defence transition materials provided to the Minister of National Defence upon re-appointment on November 20, 2019"
+            "National Defence transition materials provided to the Minister of National Defence upon re-appointment on November 20, 2019",
+            ""
         ],
         "keywords": [
             "National Defence",
@@ -8544,7 +8617,8 @@
     "121": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/c32806dd-442e-499c-bc43-492f1412afe7",
         "dataset_description": [
-            "National Defence transition materials provided to the Minister of National Defence upon re-appointment on November 20, 2019"
+            "National Defence transition materials provided to the Minister of National Defence upon re-appointment on November 20, 2019",
+            ""
         ],
         "keywords": [
             "National Defence",
@@ -8590,7 +8664,8 @@
     "122": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/213229ef-ce0f-4fb7-bd5c-d430cc091c02",
         "dataset_description": [
-            "Briefing binder created for the Minister of National Defence on the occasion of his appearance before the Committee of the Whole convened on December 9, 2019 for the purpose of examining the Supplementary Estimates (A) submission of the Department of National Defence and the Canadian Armed Forces."
+            "Briefing binder created for the Minister of National Defence on the occasion of his appearance before the Committee of the Whole convened on December 9, 2019 for the purpose of examining the Supplementary Estimates (A) submission of the Department of National Defence and the Canadian Armed Forces.",
+            ""
         ],
         "keywords": [
             "Committee of the Whole",
@@ -8633,7 +8708,8 @@
     "123": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/3c5f7ecf-ab7f-40a8-90a9-05217832a795",
         "dataset_description": [
-            "Briefing binder created for the Minister of National Defence on the occasion of his appearance before the Committee of the Whole convened on December 9, 2019 for the purpose of examining the Supplementary Estimates (A) submissions of Veterans Affairs Canada, Communications Security Establishment, Public Safety Canada, Correctional Service Of Canada, Canada Border Services Agency, Royal Canadian Mounted Police, and National Security and Intelligence Review Agency."
+            "Briefing binder created for the Minister of National Defence on the occasion of his appearance before the Committee of the Whole convened on December 9, 2019 for the purpose of examining the Supplementary Estimates (A) submissions of Veterans Affairs Canada, Communications Security Establishment, Public Safety Canada, Correctional Service Of Canada, Canada Border Services Agency, Royal Canadian Mounted Police, and National Security and Intelligence Review Agency.",
+            ""
         ],
         "keywords": [
             "Committee of the Whole",
@@ -8720,7 +8796,8 @@
     "125": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/c5bbb456-7396-4345-80e3-3e0b96f635b2",
         "dataset_description": [
-            "The e-binder contains short summaries of thematic issues, trends and challenges facing Library and Archives Canada (LAC) for the new Librarian and Archivist of Canada. The e-binder also includes links to summary organizational charts for each LAC sector."
+            "The e-binder contains short summaries of thematic issues, trends and challenges facing Library and Archives Canada (LAC) for the new Librarian and Archivist of Canada. The e-binder also includes links to summary organizational charts for each LAC sector.",
+            ""
         ],
         "keywords": [
             "access",
@@ -8787,7 +8864,8 @@
     "126": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/2457d303-8449-4f4e-af79-811ea747e3f5",
         "dataset_description": [
-            "A seakeeping trial with the naval destroyer HMCS Nipigon was conducted in December 1997. This dataset includes ship properties, measured ship motions, and measured ocean wave spectra from the sea trials. This dataset is intended to be used for validation of numerical predictions of ship motions in waves."
+            "A seakeeping trial with the naval destroyer HMCS Nipigon was conducted in December 1997. This dataset includes ship properties, measured ship motions, and measured ocean wave spectra from the sea trials. This dataset is intended to be used for validation of numerical predictions of ship motions in waves.",
+            ""
         ],
         "keywords": [
             "Naval architecture",
@@ -8855,7 +8933,8 @@
     "127": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/98e6b631-25d1-49d9-bdba-c17c86cc1ddd",
         "dataset_description": [
-            "The purpose of this document is to set out the key initiatives for the next three years to mature the Information Management (IM) Programme for the DND/CAF."
+            "The purpose of this document is to set out the key initiatives for the next three years to mature the Information Management (IM) Programme for the DND/CAF.",
+            ""
         ],
         "keywords": [
             "Information Management",
@@ -8900,7 +8979,8 @@
     "128": {
         "dataset_url": "https://open.canada.ca/data/en/dataset/1d102251-1ad2-4553-bfc3-7e59d4e93942",
         "dataset_description": [
-            "The peaceful and democratic society we enjoy was created by the efforts and sacrifices of generations of Canadians who have put their lives on the line in the cause of peace and freedom around the world. Remembering and learning about all that they have done helps us to better understand our nation's history and its future."
+            "The peaceful and democratic society we enjoy was created by the efforts and sacrifices of generations of Canadians who have put their lives on the line in the cause of peace and freedom around the world. Remembering and learning about all that they have done helps us to better understand our nation's history and its future.",
+            ""
         ],
         "keywords": [
             "Commemoration",
