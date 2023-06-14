@@ -87,9 +87,10 @@ app.layout = html.Div(
 def process_message(n_clicks, history, text):
     response_final = format_responses(api.generate_response(text, maximum_num_responses=4))
 
-    user_text = split_text(text)
-    user_text.reverse()
-    user = "".join(user_text)
+    # user_text = split_text(text)
+    # user_text.reverse()
+    # user = "".join(user_text)
+    user = text
     user_msg = [
         html.P(user, style={'text-align': 'right',
                             "border-radius": "15px",
