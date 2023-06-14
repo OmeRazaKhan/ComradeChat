@@ -70,6 +70,7 @@ class Parser:
         # Load the metadata for each key.
         for id in datasets:
             current_dataset = datasets[id]
+            dataset_id = int(id)
 
             keywords = None
             subjects = None
@@ -97,7 +98,7 @@ class Parser:
             if "resources" in current_dataset:
                 resource_entry = current_dataset["resources"]
                 resources = self._parse_resources(resource_entry)
-            metadata = MetaData(id, description, url, keywords=keywords, subjects=subjects,
+            metadata = MetaData(dataset_id, description, url, keywords=keywords, subjects=subjects,
                                 audience=audience, start_date=start, end_date=end, resources=resources)
-            all_metadata[id] = metadata
+            all_metadata[dataset_id] = metadata
         return all_metadata

@@ -4,6 +4,7 @@ Contains all necessary information for each dataset scraped.
 from python.database.supported_file_type import SupportedFileType
 from datetime import datetime
 from typing import Any
+import json
 
 
 class Resource:
@@ -25,7 +26,7 @@ class Resource:
             languages = [languages]
         self._languages = languages
         self._file_type = file_type
-        self._url = url
+        self._resource_url = url
         self._miscellaneous = miscellaneous
 
     @property
@@ -43,11 +44,18 @@ class Resource:
         return self._languages
 
     @property
-    def file_type(self) -> SupportedFileType:
+    def file_type(self) -> str:
         """
         The file type of the dataset.
         """
         return self._file_type
+
+    @property
+    def resource_url(self) -> str:
+        """
+        The url link to download the resource.
+        """
+        return self._resource_url
 
     @property
     def miscellaneous(self) -> list:
@@ -55,6 +63,23 @@ class Resource:
         Miscellaneous data which may be useful.
         """
         return self._miscellaneous
+
+    def __str__(self) -> str:
+        """
+        Returns a JSON string representation of the resource.
+        """
+        temp_dict = dict()
+        if not self.title is None:
+            temp_dict["title"] = self.title
+        if not self.file_type is None:
+            temp_dict["file_type"] = self.file_type
+        if not self.languages is None:
+            temp_dict["languages"] = self.languages
+        if not self.resource_url is None:
+            temp_dict["resource_url"] = self.languages
+        if not self.miscellaneous is None:
+            temp_dict["miscellaneous"] = self.miscellaneous
+        return json.dumps(temp_dict)
 
 
 class MetaData:

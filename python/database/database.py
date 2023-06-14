@@ -2,6 +2,7 @@
 Module providing a method of interacting with the data scraped from the open search portal.
 """
 
+
 class Database:
 
     def __init__(self, ids_to_metadata: dict):
@@ -45,7 +46,7 @@ class Database:
         Returns:
             (list): A list of all resources relevant to the dataset.
         """
-        return self._ids_to_metadata.get(id).resource
+        return self._ids_to_metadata.get(id).resources
 
     def get_all_keys(self):
         """

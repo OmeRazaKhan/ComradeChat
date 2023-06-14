@@ -1,0 +1,153 @@
+{
+    "1": {
+        "dataset_url": "https://open.canada.ca/data/en/dataset/3ac0d080-6149-499a-8b06-7ce5f00ec56c",
+        "dataset_description": [
+            "The Service Inventory provides a corporate-wide perspective on information related to Government of Canada (GC) services.",
+            "A visualization of this data can be found on GC InfoBase at https://www.tbs-sct.gc.ca/ems-sgd/edb-bdd/index-eng.html#infographic/gov/gov/services"
+        ],
+        "keywords": [
+            "service inventory",
+            "services",
+            "service standards"
+        ],
+        "subjects": [
+            "Arts, Music, Literature",
+            "Agriculture",
+            "Economics and Industry",
+            "Education and Training",
+            "Government and Politics",
+            "Health and Safety",
+            "Information and Communications",
+            "Labour",
+            "Language and Linguistics",
+            "Law",
+            "Military",
+            "Nature and Environment",
+            "Persons",
+            "Processes",
+            "Society and Culture",
+            "Science and Technology",
+            "Transport"
+        ],
+        "audience": [
+            "Indigenous peoples",
+            "Business",
+            "Educators",
+            "Employers",
+            "Funding applicants",
+            "General public",
+            "Government",
+            "Immigrants",
+            "Job seekers",
+            "Media",
+            "Non-Canadians",
+            "Non-governmental organizations",
+            "Parents",
+            "Persons with disabilities",
+            "Rural community",
+            "Seniors",
+            "Scientists",
+            "Students",
+            "Travellers",
+            "Veterans",
+            "Visitors to Canada",
+            "Women",
+            "Youth"
+        ],
+        "temporal_coverage": "2018-04-01 to 2024-03-31",
+        "resources": [
+            {
+                "title": "Service Identification Information & Metrics (2018-2022)\nCSV",
+                "languages": [
+                    "English",
+                    "French"
+                ],
+                "file_type": "CSV",
+                "miscellaneous": [
+                    "dataset"
+                ],
+                "resource_url": "https://open.canada.ca/data/dataset/3ac0d080-6149-499a-8b06-7ce5f00ec56c/resource/3acf79c0-a5f5-4d9a-a30d-fb5ceba4b60a/download/service_inventory.csv"
+            },
+            {
+                "title": "Service Standards & Performance Results (2018-2022)\nCSV",
+                "languages": [
+                    "English",
+                    "French"
+                ],
+                "file_type": "CSV",
+                "miscellaneous": [
+                    "dataset"
+                ],
+                "resource_url": "https://open.canada.ca/data/dataset/3ac0d080-6149-499a-8b06-7ce5f00ec56c/resource/272143a7-533e-42a1-b72d-622116474a21/download/service_standards.csv"
+            },
+            {
+                "title": "Data Dictionary (2022)\nXLSX",
+                "languages": [
+                    "English",
+                    "French"
+                ],
+                "file_type": "XLSX",
+                "miscellaneous": [
+                    "guide"
+                ],
+                "resource_url": "https://open.canada.ca/data/dataset/3ac0d080-6149-499a-8b06-7ce5f00ec56c/resource/12e48539-b1dc-4732-9c88-a6c096a714f2/download/si-ogp-data-dictionary-2022.xlsx"
+            },
+            {
+                "title": "Data Dictionary (2022)\nJSON",
+                "languages": [
+                    "English",
+                    "French"
+                ],
+                "file_type": "JSON",
+                "miscellaneous": [
+                    "guide"
+                ],
+                "resource_url": "https://open.canada.ca/data/dataset/3ac0d080-6149-499a-8b06-7ce5f00ec56c/resource/659de961-34f6-4aae-8f67-5cb0069f5efb/download/service_inventory_dd_json_ogp_2022.json"
+            }
+        ]
+    },
+    "2": {
+        "dataset_url": "https://open.canada.ca/data/en/dataset/e33bcd95-d0e5-4ade-9f5c-78f0a5a4d7a0",
+        "dataset_description": [
+            "Section 4.2 of the Department of Justice Act requires the Minister of Justice to prepare a Charter Statement for every government bill to help inform public and Parliamentary debate on government bills. One of the Minister of Justice\u2019s most important responsibilities is to examine legislation for inconsistency with the Canadian Charter of Rights and Freedoms [\u201cthe Charter\u201d]. By tabling a Charter Statement, the Minister is sharing some of the key considerations that informed the review of a bill for inconsistency with the Charter. A Statement identifies Charter rights and freedoms that may potentially be engaged by a bill and provides a brief explanation of the nature of any engagement, in light of the measures being proposed.",
+            "A Charter Statement also identifies potential justifications for any limits a bill may impose on Charter rights and freedoms. Section 1 of the Charter provides that rights and freedoms may be subject to reasonable limits if those limits are prescribed by law and demonstrably justified in a free and democratic society. This means that Parliament may enact laws that limit Charter rights and freedoms. The Charter will be violated only where a limit is not demonstrably justifiable in a free and democratic society.",
+            "A Charter Statement is intended to provide legal information to the public and Parliament on a bill\u2019s potential effects on rights and freedoms that are neither trivial nor too speculative. It is not intended to be a comprehensive overview of all conceivable Charter considerations. Additional considerations relevant to the constitutionality of a bill may also arise in the course of Parliamentary study and amendment of a bill. A Statement is not a legal opinion on the constitutionality of a bill."
+        ],
+        "keywords": [
+            "43rd Parliament: 2nd Session",
+            "Charter Statement",
+            "Canadian Charter of Rights and Freedoms",
+            "Legislation",
+            "Justice System"
+        ],
+        "subjects": [
+            "Government and Politics",
+            "Law",
+            "Military"
+        ],
+        "resources": [
+            {
+                "title": "Charter Statement - Bill S-2: An Act to amend the Chemical Weapons Convention Implementation Act\nHTML",
+                "languages": [
+                    "English"
+                ],
+                "file_type": "HTML",
+                "miscellaneous": [
+                    "publication"
+                ],
+                "resource_url": null
+            },
+            {
+                "title": "Charter Statement - Bill S-2: An Act to amend the Chemical Weapons Convention Implementation Act\nHTML",
+                "languages": [
+                    "French"
+                ],
+                "file_type": "HTML",
+                "miscellaneous": [
+                    "publication"
+                ],
+                "resource_url": null
+            }
+        ]
+    }
+}
