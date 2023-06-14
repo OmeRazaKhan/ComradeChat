@@ -34,7 +34,6 @@ def split_text(text):
 def format_responses(response):
     formatted_res = []
     for index, r in enumerate(response):
-        print(r)
         res_number = [
             html.P("Response # " + str(index + 1), 
                    style={'text-align': 'left', "margin" : "1px"})
